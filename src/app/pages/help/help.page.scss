@@ -1,0 +1,111 @@
+ion-title{
+    font-size: 30px;
+    font-family: sf_pro_display_bold;
+}
+
+.logo ion-img{
+  width: 191px;
+  height: 43px;
+  margin: 0px auto;
+}
+
+.input-label{
+    color:var(--ion-color-success);
+    font-size:14px;
+    font-family: sf_pro_display_bold;
+  
+  }
+
+  .custom-item ion-select{
+    background: #F0F5FA !important;
+    padding-left: 16px !important;
+    border-radius: 10px !important;
+    margin-top: 0px;
+    font-family: sf_pro_display_regular;
+    font-size: 12.5px;
+    color: #6B6E82;
+    height: 52px;
+}
+
+ion-textarea  {
+    background: #F0F5FA !important;
+    padding-left: 16px !important;
+    height: 185px;
+    border-radius: 10px !important;
+    margin-top: 0px;
+    font-family: sf_pro_display_regular;
+    font-size: 12px;
+    --placeholder-color: #6B6E82;
+}
+ion-select {
+    position: relative;
+  }
+  
+  ion-select ion-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px; /* Adjust the right distance as needed */
+    transform: translateY(-50%);
+  }
+
+  ion-select::part(icon) {
+    display: none;
+  }
+
+  .textarea{
+    margin-top: 8px;
+  }
+
+  .maindivinput, .maindivinfo{
+    box-sizing: border-box;
+    box-shadow: 5px 9px 9px 5px #F5F5F7;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 12px;
+  }
+
+  .maindivinput{
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .sendbtn{
+    text-align: center;
+    margin: 15px auto;
+  }
+
+  .sendbtn ion-button{
+    width: 180px;
+    height: 50px;
+    text-transform: none;
+    font-family: sf_pro_display_regular;
+    font-size: 14px;
+    --border-radius: 8px;
+    width: 180px;
+    height: 44px;
+    text-transform: none;
+    font-family: sf_pro_display_regular;
+    font-size: 14px;
+    --border-radius: 8px;
+  }
+
+  .address{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+    font-size: 13px;
+  }
+
+  .home{
+    font-size: 13px;
+  }
+
+  .maindivinfo ion-item{
+    margin-top: 15px;
+  }
+
+  ion-avatar{
+    margin-right: 3px;
+  }

@@ -1,0 +1,115 @@
+capacitor-google-map {
+    display: inline-block;
+    width: 275px;
+    height: 400px;
+  }
+
+  iframe{
+    width: 100%;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    height: 245px;
+  }
+
+  .button-container {
+    position: absolute;
+    top: 10px; /* Adjust top position as needed */
+    left: 10px; /* Adjust right position as needed */
+    z-index: 9999; /* Ensure it's above the iframe */
+  }
+  
+  .tabs{
+    width: 94px;
+    height: 45px;
+    --box-shadow:none;
+    margin-right: 10px;
+    text-transform:none;
+    --font-family: sf_pro_display_regular;
+    --font-size:16px;
+    --border-radius: 10px;
+  }
+
+.unselected{
+    --background:#F0F5FA;
+    --color:#32343E;
+    --border-radius: 10px;
+}
+
+.cancelbtn{
+  width: 111px;
+    --border-radius:10px;
+    font-size: 14.5px;
+    font-family: sf_pro_display_regular;
+    height: 44px;
+    text-transform: none;
+    --border-radius: 10px;
+}
+
+ ion-input {
+  background: #F0F5FA !important;
+  border-radius: 10px !important;
+  margin-top: -6px;
+  font-family: sf_pro_display_regular;
+  font-size: 14px;
+  color: #6B6E82;
+  padding: 3px !important;
+  height: 45px;
+  --padding-start: 10px;
+  --padding-bottom: 4px;
+}
+
+ion-input ion-icon{
+  margin-left: 15px;
+  font-size: 18px;
+}
+
+ion-input:hover {
+    box-shadow: none !important;
+}
+
+.input-label{
+  color:#32343E;
+  font-size:14.5px;
+  font-family: sf_pro_display_bold;
+  color:var(--ion-color-success);
+  margin-top:10px ;
+  
+
+}
+.buttons_item{
+  margin-top: 10px;
+}
+
+ion-segment-button{
+  --indicator-color: transparent !important;
+  --indicator-color-checked: transparent !important;
+  --background:var(--ion-color-light);
+  width: 94px;
+  height: 45px;
+  margin-right: 20px;
+}
+
+.unselectedbtn{
+  background: aliceblue;
+  border-radius: 10px;
+  height: 40px;
+  margin-right: 8px;
+  font-size: 14px;
+  font-family: sf_pro_display_regular;
+  width: 80px;   
+}
+
+.unselected:focus{
+  background: var(--ion-color-primary);
+  color: #ffff;
+}
+
+button.unselectedbtn:focus {
+  background: var(--ion-color-primary);
+  color: #ffff;
+}
+
+.labelbtn{
+  margin-right: 20px;
+}
+

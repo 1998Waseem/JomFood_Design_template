@@ -1,0 +1,55 @@
+
+ion-header{
+    box-shadow: none;
+}
+
+ion-title{
+    font-size: 30px;
+    font-family: sf_pro_display_bold;
+}
+
+
+
+.date{
+    color: #9C9BA6;
+    font-size: 12px;
+    font-family: sf_pro_display_regular;
+    margin-top: -3px;
+}
+
+.profile_img{
+    position: absolute;
+    top: 0;
+    left: 14px;
+}
+
+.comment_heading{
+    margin-top: 10px;
+    font-size: 14px;
+    font-family: sf_pro_display_bold;
+    color: var(--ion-color-success);
+}
+
+.stars{
+    margin-top: 10px;
+    font-size: 12px;
+}
+.stars ion-icons{
+    margin-right: 4px;
+}
+.comment_desc{
+    font-size: 10px;
+    margin-top: 10px;
+    color: #747783;
+    font-family: sf_pro_display_regular;
+    line-height: 13px;
+}
+
+.reviews{
+    margin-left:46px;
+    margin-top:6px;
+    width: 100%;
+    background: #F0F5FA;
+    padding: 15px;
+    border-radius: 15px;
+}

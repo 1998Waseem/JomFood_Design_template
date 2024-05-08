@@ -1,0 +1,118 @@
+
+  <!-- <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="#"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar> -->
+
+
+<ion-content mode="md">
+
+  <div>
+  
+  <ion-grid>
+    <ion-row>
+      <ion-col size="1" class="animation">
+         
+      </ion-col>
+      <ion-col size="10"></ion-col>
+      <ion-col size="1" class="animation1 ion-text-right"></ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="1"></ion-col>
+      <ion-col size="2" style="text-align: left;
+      margin-top: -7.84vh;
+      font-size: 3.26vh">
+        <ion-icon src="../../../assets/icon/arrow-left.svg" (click)="gotowelcome()"/>
+      </ion-col>
+      <ion-col size="7">
+       
+      </ion-col>
+      <ion-col size="2"></ion-col>
+    </ion-row>
+    <ion-row style="margin-top: -3.92vh;">
+      <ion-col size="1"></ion-col>
+      <ion-col size="10" class="ion-text-center signupmainclass animate__animated animate__zoomIn animate__faster">
+        <ion-label color="success">Login</ion-label>
+      </ion-col>
+      <ion-col size="1"></ion-col>
+    </ion-row>
+    
+    <ion-row>
+      <ion-col size="1"></ion-col>
+      <ion-col size="10" class="animate__animated animate__fadeInRightBig">
+      
+        <div class="inputfield" id="emailfield" style="margin-top: 2.61vh !important;">
+        <ion-label>E-mail</ion-label>
+        <ion-input type="email" placeholder="Your email or phone" class="email" fill="outline"/>
+      </div>
+
+      <div class="inputfield" id="passwordfield">
+        <ion-label>Password</ion-label>
+        <ion-input type="password" placeholder="Password" class="email" fill="outline">
+          <ion-button fill="clear" slot="end" aria-label="Show/hide">
+            <ion-icon slot="icon-only" src="../../../assets/icon/eye.svg"></ion-icon>
+          </ion-button>
+        </ion-input>
+        </div>
+
+        <div class="forgotpassword">
+          <ion-label color="primary" (click)="gotoforgot()">Forgot password?</ion-label>
+        </div>
+        <div class="signupbutton">
+        <ion-button color="primary" id="open-loading" shape="round" size="default" (click)="gotodashboard()" class="login_btn">Login</ion-button>
+        <ion-loading trigger="open-loading" message="Loading..." duration="3000"></ion-loading>
+      </div>
+
+      <div class="afterbtntext">
+        <ion-label color="tertiary">Don’t have an account? </ion-label><ion-label color="primary" (click)="gotosignup()">Sign Up</ion-label>
+      </div>
+      </ion-col>
+      <ion-col size="1"></ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <div class="buttons animate__animated animate__fadeInUpBig">
+
+    <ion-grid>
+      <ion-row class="ion-align-items-end">
+        <ion-col size="1"></ion-col>
+        <ion-col size="10">
+          <p class="signin">sign in with</p>
+        </ion-col>
+        <ion-col size="1"></ion-col>
+
+      </ion-row>
+      <ion-row style="margin-top:-15px;">
+        <ion-col size="1"></ion-col>
+        <ion-col size="5" class="ion-text-center">
+          <ion-button color="light"  size="small"  class="social_btn">
+            <!-- <img slot="start" src="../../assets/icon/whatsapp.png" style="width: 20%;" />&nbsp;&nbsp; -->
+            <ion-icon slot="start" src="../../../assets/icon/whatsapp.svg" />
+            Whatsapp
+          </ion-button>
+        </ion-col>
+        <!-- <ion-col size="2"></ion-col> -->
+        <ion-col size="5" class="ion-text-center">
+          <ion-button color="light"  size="small" class="social_btn">
+            <!-- <img slot="start" src="../../assets/icon/google.png" style="width: 20%;" />&nbsp;&nbsp; -->
+            <ion-icon slot="start" src="../../../assets/icon/google.svg" />
+            Google
+          </ion-button>
+          <ion-col size="1"></ion-col>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="1"></ion-col>
+        <ion-col size="10" class="ion-text-center">
+          <button class="guest_btn" (click)="gotodashboard()">Continue as a Guest</button>
+        </ion-col>
+        <ion-col size="1"></ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</div>
+</ion-content>

@@ -1,0 +1,62 @@
+ion-title {
+    font-size: 30px;
+    font-family: sf_pro_display_bold;
+}
+.name{
+    font-size:17.5px;
+    font-family: sf_pro_display_regular;
+}
+
+.firstname, .lastname{
+    font-size:13.5px;
+    font-family: sf_pro_display_regular;
+}
+
+.email{
+    font-size: 13px;
+    font-family: sf_pro_display_regular;
+    margin-top: -10px;
+}
+
+
+.fullname_col{
+    line-height: 10px;
+}
+ion-avatar{
+    width: 90px;
+    height: 90px;
+}
+
+.profilelist{
+    position: relative;
+    left: -27px;
+}
+
+.profile_col{
+    margin-top: -20px;
+    margin-left: -15px;
+    line-height: 20px;
+}
+.personal_info_head{
+    font-size: 16px;
+    font-family: sf_pro_display_bold;
+}
+.personal_info_list, .personal_info_item{
+    background-color: #ffff;
+}
+
+.personal_info_list ion-icon{
+    font-size: 23px;
+}
+
+.personal_info{
+    // margin-top: 10px;
+    box-sizing: border-box;
+    box-shadow: 10px 10px 10px 10px #F5F5F7;
+}
+
+.address{
+    margin-top: 15px;
+    box-sizing: border-box;
+    box-shadow: 10px 10px 10px 10px #F5F5F7;
+}

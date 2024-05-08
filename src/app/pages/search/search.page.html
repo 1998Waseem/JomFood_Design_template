@@ -1,0 +1,18 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="#" color="success" icon="../../../assets/icon/arrow-left.svg">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-searchbar placeholder="Find for food or restaurant..." class="searchbar" fill="outline" show-clear-button="focus"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+ 
+  <ion-label color="success" class="RecentSearches">Recent Searches</ion-label><br>
+  
+  <div class="searcheditems">
+  <ion-chip color="primary">Biryani</ion-chip>  <ion-chip>Samosa</ion-chip>  <ion-chip>Mandi</ion-chip> <ion-chip>Naan</ion-chip>
+</div>
+</ion-content>

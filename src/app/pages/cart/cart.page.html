@@ -1,0 +1,721 @@
+<ion-toolbar class="ion-text-center">
+  <ion-title color="success">Cart</ion-title>
+  <ion-buttons slot="start">
+    <ion-back-button default-href="#" color="success" icon="../../../assets/icon/arrow-left.svg" >
+    </ion-back-button>
+  </ion-buttons>
+  <ion-buttons slot="end">
+   
+      <ion-icon src="../../../assets/icon/arrow-left.svg" style="opacity: 0;"/>
+   
+  </ion-buttons>
+</ion-toolbar>
+
+<ion-content [fullscreen]="true" lines="none" class="cartcontent ion-padding">
+
+  <!-- <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <p class="delivery-detail-heading">Your Delivery Details</p>
+      </ion-col>
+      <ion-col size="6" style="text-align: right;">
+        <ion-button color="primary" size="small" id="open-delivery-options" class="delivery_btn">Delivery
+          <ion-icon name="chevron-down-outline"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid> -->
+
+  <ion-list>
+    <ion-item lines="none" style="margin-top: -10px;">
+      <ion-label color="success" class="delivery-detail-heading ion-text-left animate__animated animate__slideInLeft">Your Delivery Details</ion-label>
+      <ion-button color="primary" size="small" id="open-delivery-options" class="delivery_btn ion-text-right animate__animated animate__slideInRight">Delivery
+        <ion-icon name="chevron-down-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+
+    <ion-item>
+      <ion-input class="address_placeholder animate__animated animate__slideInLeft" placeholder="Select Your Address">
+        <ion-icon slot="start" src="../../../assets/icon/locationorange.svg" class="location-icon"></ion-icon>
+      </ion-input>
+      <ion-button class="addressbtn animate__animated animate__slideInRight" size="small" id="open-other-options">ASAP
+        <ion-icon slot="start" name="time-outline"></ion-icon>
+        <ion-icon slot="end" name="chevron-down-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+    
+
+  </ion-list>
+
+  <!-- <ion-list>
+    <ion-item>
+      <ion-input slot="start" class="address_placeholder" placeholder="Select Your Address">
+        <ion-icon slot="start" src="../../../assets/icon/locationorange.svg" class="location-icon"></ion-icon>
+      </ion-input>
+
+      <ion-label class="ion-text-right">
+        <ion-img src="../../../assets/icon/Line.svg" />
+      </ion-label>
+
+      <ion-button class="addressbtn" size="small" slot="end" id="open-other-options">ASAP
+        <ion-icon slot="start" name="time-outline"></ion-icon>
+        <ion-icon slot="end" name="chevron-down-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list> -->
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <p class="tip animate__animated animate__slideInLeft">Tip Your Rider</p>
+        <p class="tipdesc animate__animated animate__slideInRight">100% of the tips go to your rider, we don’t deduct anything from it.</p>
+        <ion-segment [scrollable]="true" lines="none" class="animate__animated animate__slideInUp">
+          <ion-segment-button color="medium" class="notnow">Not Now</ion-segment-button>
+          <ion-segment-button value="home" class="tipvalue">RM 1.00</ion-segment-button>
+          <ion-segment-button value="home" class="tipvalue">RM 2.00</ion-segment-button>
+          <ion-segment-button value="home" class="tipvalue">RM 3.00</ion-segment-button>
+          <ion-segment-button value="home" class="tipvalue">RM 4.00</ion-segment-button>
+          <ion-segment-button value="home" class="tipvalue">RM 5.00</ion-segment-button>
+          <ion-segment-button value="home" class="tipvalue">RM 6.00</ion-segment-button>
+          <ion-segment-button value="home" class="tipvalue">RM 7.00</ion-segment-button>
+          <ion-segment-button value="home" class="tipvalue">RM 8.00</ion-segment-button>
+          <ion-segment-button value="home" class="tipvalue">RM 9.00</ion-segment-button>
+          <ion-segment-button value="home" class="tipvalue">RM 10.00</ion-segment-button>
+          <ion-segment-button value="home" class="tipvalue">RM 11.00</ion-segment-button>
+        </ion-segment>
+        <div class="checkbox animate__animated animate__slideInLeft">
+          <ion-checkbox labelPlacement="end"><ion-label style="font-family: sf_pro_display_regular;
+            font-size: 15px;
+            --color: #445470;">Save for your next order</ion-label></ion-checkbox>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-row>
+    <ion-col size="12">
+      <p class="yourorderheading animate__animated animate__slideInLeft">Your Order</p>
+    </ion-col>
+  </ion-row>
+
+  <div class="sliding-item animate__animated animate__slideInLeft">
+
+    <ion-item-sliding>
+
+      <ion-item lines="none" class=>
+        <ion-avatar slot="start">
+          <ion-img src="../../../assets/images/Beefsamosa.png" />
+        </ion-avatar>
+        <div class="item-info">
+          <ion-row>
+            <ion-col size="12">
+              <p class="itemname">Beef Samosa</p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="12" style="margin-top: -16px;">
+              <p class="itemprice">$12.00</p>
+            </ion-col>
+          </ion-row>
+        </div>
+
+        <div class="counter" slot="end">
+
+          <ion-row>
+            <ion-col>
+              <ion-icon name="remove" slot color="dark"
+                style="font-size: 20px;border-radius: 40px;border: 1px solid #FC7A1E;"></ion-icon>
+            </ion-col>
+            <ion-col>
+              <ion-label color="success" class="countitem">4</ion-label>
+
+            </ion-col>
+            <ion-col>
+              <ion-icon name="add"
+                style="font-size: 20px; background: #FC7A1E;color: #fff;border-radius: 40px;border: 1px solid #FC7A1E;"></ion-icon>
+            </ion-col>
+          </ion-row>
+        </div>
+
+      </ion-item>
+
+      <ion-item-options side="end">
+        <ion-item-option>
+          <ion-icon slot="icon-only" src="../../../assets/icon/deleteicon.svg"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+
+
+  </div>
+
+  <div class="sliding-item animate__animated animate__slideInLeft">
+
+    <ion-item-sliding>
+
+      <ion-item lines="none">
+        <ion-avatar slot="start">
+          <ion-img src="../../../assets/images/Beefsamosa.png" />
+        </ion-avatar>
+        <div class="item-info">
+          <ion-row>
+            <ion-col size="12">
+              <p class="itemname">Beef Samosa</p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="12" style="margin-top: -16px;">
+              <p class="itemprice">$12.00</p>
+            </ion-col>
+          </ion-row>
+        </div>
+
+        <div class="counter" slot="end">
+
+          <ion-row>
+            <ion-col>
+              <ion-icon name="remove" slot color="dark"
+                style="font-size: 20px;border-radius: 40px;border: 1px solid #FC7A1E;"></ion-icon>
+            </ion-col>
+            <ion-col>
+              <ion-label color="success" class="countitem">4</ion-label>
+
+            </ion-col>
+            <ion-col>
+              <ion-icon name="add"
+                style="font-size: 20px; background: #FC7A1E;color: #fff;border-radius: 40px;border: 1px solid #FC7A1E;"></ion-icon>
+            </ion-col>
+          </ion-row>
+        </div>
+
+      </ion-item>
+
+      <ion-item-options side="end">
+        <ion-item-option>
+          <ion-icon slot="icon-only" src="../../../assets/icon/deleteicon.svg"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+
+
+  </div>
+
+  <div class="sliding-item animate__animated animate__slideInLeft">
+
+    <ion-item-sliding>
+
+      <ion-item lines="none">
+        <ion-avatar slot="start">
+          <ion-img src="../../../assets/images/Beefsamosa.png" />
+        </ion-avatar>
+        <div class="item-info">
+          <ion-row>
+            <ion-col size="12">
+              <p class="itemname">Beef Samosa</p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="12" style="margin-top: -16px;">
+              <p class="itemprice">$12.00</p>
+            </ion-col>
+          </ion-row>
+        </div>
+
+        <div class="counter" slot="end">
+
+          <ion-row>
+            <ion-col>
+              <ion-icon name="remove" slot color="dark"
+                style="font-size: 20px;border-radius: 40px;border: 1px solid #FC7A1E;"></ion-icon>
+            </ion-col>
+            <ion-col>
+              <ion-label color="success" class="countitem">4</ion-label>
+
+            </ion-col>
+            <ion-col>
+              <ion-icon name="add"
+                style="font-size: 20px; background: #FC7A1E;color: #fff;border-radius: 40px;border: 1px solid #FC7A1E;"></ion-icon>
+            </ion-col>
+          </ion-row>
+        </div>
+
+      </ion-item>
+
+      <ion-item-options side="end">
+        <ion-item-option>
+          <ion-icon slot="icon-only" src="../../../assets/icon/deleteicon.svg"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+
+
+  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <p class="promoheading animate__animated animate__slideInLeft">Promo Code</p>
+      </ion-col>
+    </ion-row>
+    <ion-list lines="none" style="border: 1px solid #E7E7E7;border-radius: 10px;height: 49px;" class="animate__animated animate__slideInRight">
+      <ion-item style="    position: relative;
+      top: -8px;">
+        <ion-input class="promo_code" placeholder="Promo Code">
+          <ion-icon slot="start" src="../../../assets/icon/wallet.svg" class="wallet_icon"></ion-icon>
+        </ion-input>
+        <ion-button id="open-confirmation-modal" color="primary" class="applybtn">Apply
+        </ion-button>
+      </ion-item>
+    </ion-list>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <p class="promoheading animate__animated animate__slideInLeft">Payment Method</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12" class="animate__animated animate__slideInRight">
+        <ion-list lines="none" class="balance-class">
+          <ion-item class="balanceitem">
+            <ion-label color="success" class="bal">Balance</ion-label>
+            <ion-label color="success" style="text-align: right;" class="bal">60.40</ion-label>
+
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- <ion-list>
+    <ion-item>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="1"></ion-col>
+          <ion-col size="5" style="text-align: left;line-height: 30px;">
+            <ion-label>Subtotal</ion-label>
+            <ion-label>Discount</ion-label>
+            <ion-label>Delivery Charges</ion-label>
+          </ion-col>
+          <ion-col size="5" style="text-align: right;line-height: 30px">
+            <ion-label>$60</ion-label>
+            <ion-label>$0</ion-label>
+            <ion-label>$3</ion-label>
+          </ion-col>
+          <ion-col size="1"></ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </ion-item>
+  </ion-list>
+
+  <ion-list lines="none">
+    <ion-item>
+      <ion-grid>
+        <ion-row style="margin-top: -30px;">
+          <ion-col size="1"></ion-col>
+          <ion-col size="5" style="text-align: left;line-height: 30px;">
+            <ion-label>GRAND TOTAL</ion-label>
+          </ion-col>
+          <ion-col size="5" style="text-align: right;line-height: 30px">
+            <ion-label>$63</ion-label>
+          </ion-col>
+          <ion-col size="1"></ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </ion-item>
+  </ion-list> -->
+
+  <ion-row class="ion-padding">
+    <ion-col size="12" class="animate__animated animate__slideInUp">
+      <ion-list lines="none">
+        <div class="borderbottom">
+        <ion-item lines="none" class="itemlisting">
+          <ion-label class="Subtotal" slot="start">Subtotal</ion-label>
+          <ion-label class="subtotalvalue ion-text-right" color="success" slot="end">$60</ion-label>
+        </ion-item>
+        <ion-item lines="none" class="itemlisting">
+          <span class="Subtotalwithbadge">Discount</span>
+          <ion-badge style="margin-left: 10px;
+          margin-top: -3px;"><span>0%</span></ion-badge>
+
+          <ion-label class="subtotalvalue ion-text-right" color="success">$0</ion-label>
+        </ion-item>
+        <ion-item lines="none" class="itemlisting">
+          <ion-label class="Subtotal" slot="start" style="position: relative;top: -10px;">Delivery Charges</ion-label>
+          <ion-label class="subtotalvalue ion-text-right" color="success" slot="end" style="position: relative;top: -10px;">$3</ion-label>
+        </ion-item>
+      </div>
+      </ion-list>
+    
+      <ion-list lines="none">
+        <div>
+        <ion-item lines="none" class="itemlisting">
+          <ion-label color="success" class="grandtotal ion-text-left" slot="start">GRAND TOTAL</ion-label>
+          <ion-label color="success" class="grandtotal ion-text-right" slot="end">$63/-</ion-label>
+        </ion-item>
+      </div>
+      </ion-list>
+    </ion-col>
+  </ion-row>
+
+
+
+  <!-- <ion-list lines="none">
+    <ion-item>
+      <ion-grid>
+        <ion-row style="margin-top: -30px;">
+          <ion-col size="1"></ion-col>
+          <ion-col size="10" style="margin-top: 20px;">
+            <ion-button id="open-confirmation-modal" color="primary" size="small" shape="round" size="large"
+              expand='full' (click)="gotocheckout()">
+              <ion-icon src="../../../assets/icon/arrow.svg" slot="start"></ion-icon>
+              <ion-label>PLACE ORDER</ion-label>
+              <ion-label slot="end">$63/-</ion-label>
+            </ion-button>
+          </ion-col>
+          <ion-col size="1"></ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </ion-item>
+  </ion-list> -->
+  <!-- <ion-row>
+    <ion-col size="1"></ion-col>
+    <ion-col size="10">
+      <ion-button color="primary" class="placeorderbtn" shape="round"><ion-icon src="../../../assets/icon/arrow.svg" slot="start"></ion-icon>Place Order&nbsp;&nbsp;&nbsp;$63</ion-button>
+      <ion-button color="primary" class="placeorderbtn">
+        <ion-icon src="../../../assets/icon/arrow.svg" slot="start"></ion-icon>
+        <ion-label>Place Order</ion-label>
+        <ion-label slot="end">$63/-</ion-label>
+      </ion-button>
+    </ion-col>
+    <ion-col size="1"></ion-col>
+  </ion-row> -->
+
+  <!-- <ion-list lines="none" >
+    <ion-item lines="none">
+      <div style="margin: 0px auto;">
+      <ion-button color="primary" class="placeorderbtn" shape="round">
+        <ion-icon src="../../../assets/icon/arrow.svg" slot="start" style="font-size: 45px;margin-left: 0px;"></ion-icon>
+        <ion-label style="font-size: 18px;
+        color: #FEDFC9;font-family: sf_pro_display_bold;">Place Order</ion-label>
+        <ion-label slot="end" style="font-size: 20px;
+        font-family: sf_pro_display_bold;">$63/-</ion-label>
+      </ion-button>
+    </div>
+
+    </ion-item>  
+  </ion-list> -->
+    <ion-grid>
+      <ion-row>
+        <ion-col size="1"></ion-col>
+        <ion-col size="10" class="animate__animated animate__slideInUp">
+          <!-- <ion-button color="primary" class="placeorderbtn" shape="round" expand="full"><ion-icon src="../../../assets/icon/arrow.svg" slot="start"></ion-icon>Place Order&nbsp;&nbsp;&nbsp;$63</ion-button> -->
+          <ion-toolbar class="orderbtn" id="open-confirmation1-modal">
+            <ion-buttons slot="start">
+              <ion-icon (click)="moveIcon()" src="../../../assets/icon/arrow.svg" slot="start" style="font-size: 45px;"></ion-icon>
+            </ion-buttons>
+            <ion-label style="font-size: 18px;
+            color: #FEDFC9;font-family: sf_pro_display_bold;text-transform: uppercase;">Place Order</ion-label>
+            <ion-buttons slot="end">
+              <ion-label style="font-size: 20px;
+              font-family: sf_pro_display_bold;">$63/-</ion-label>
+            </ion-buttons>
+          </ion-toolbar>
+        </ion-col>
+        <ion-col size="1"></ion-col>
+      </ion-row>
+
+
+      <!-- <ion-row>
+        <ion-col size="1"></ion-col>
+        <ion-col size="2">
+          <ion-icon src="../../../assets/icon/arrow.svg" slot="start" style="font-size: 45px;"></ion-icon>
+        </ion-col>
+        <ion-col size="4"></ion-col>
+        <ion-col size="4"></ion-col>
+        <ion-col size="1"></ion-col>
+      </ion-row> -->
+    </ion-grid>
+
+  
+
+  <ion-modal trigger="open-delivery-options" [initialBreakpoint]="1" [breakpoints]="[0, 1]" class="confirm-modal ">
+    <ng-template>
+      <div class="block ion-padding">
+        <ion-list lines="none">
+          <ion-item lines="none">
+            <div slot="start" class="ion-text-center camera">
+
+              <img src="../../../assets/images/delivery.svg" class="cam_img" />
+              <p class="ordertype">Delivery</p>
+
+            </div>
+            <div slot="end" class="ion-text-center camera">
+
+
+              <img src="../../../assets/images/pickup.svg" class="cam_img" />
+              <p  class="ordertype">Self Pickup</p>
+
+            </div>
+          </ion-item>
+
+          <ion-item lines="none">
+            <ion-button color="primary" class="continue" (click)="gotopaymentsucess()" id="open-loading">Continue</ion-button>
+          </ion-item>
+
+        </ion-list>
+
+      </div>
+    </ng-template>
+  </ion-modal>
+
+
+  <!-- <ion-modal trigger="open-other-options" [initialBreakpoint]="1" [breakpoints]="[0, 1]" class="confirm-modal">
+    <ng-template>
+      <div class="block">
+      
+      </div>
+    </ng-template>
+  </ion-modal> -->
+
+  <!-- <ion-modal trigger="open-other-options" [initialBreakpoint]="1" [breakpoints]="[0, 1]" class="confirm-modal">
+    <ng-template>
+      <div class="block">
+        <ion-grid>
+          <ion-row>
+            <ion-col size="12">
+              <ion-segment value="default" class="ion-padding" [(ngModel)]="selectedSegment">
+                <ion-segment-button value="ASAP">
+                  <ion-label>ASAP</ion-label>
+                </ion-segment-button>
+                <ion-segment-button value="Later" style="text-transform: none;">
+                  <ion-label>Later</ion-label>
+                </ion-segment-button>
+              </ion-segment>
+  
+              <div *ngIf="selectedSegment === 'ASAP'">
+                <ion-list>
+                  <ion-item>
+                    <ion-input slot="start" class="address_placeholder" placeholder="Address">
+                      <ion-icon slot="start" src="../../../assets/icon/locationorange.svg" class="location-icon"></ion-icon>
+                    </ion-input>
+                    <ion-label color="primary" slot="end">Change</ion-label>
+                  </ion-item>
+  
+                  <ion-item lines="none">
+                    <ion-button color="primary" class="continue2">Continue</ion-button>
+                  </ion-item>
+                </ion-list>
+              </div>
+  
+              <div *ngIf="selectedSegment === 'Later'">
+                <ion-list lines="none">
+                  <ion-item lines="none">
+                    <ion-label color="success" slot="start" style="font-size: 18px;font-family: sf_pro_display_bold;">Pick a Day</ion-label>
+                    <div slot="end">
+                      <ion-label color="primary" style="font-size: 14px;font-family: sf_pro_display_regular;">Next Week<ion-icon style="font-size: 18px;margin-bottom: -4px;" src="../../../assets/icon/forward.svg"></ion-icon></ion-label>
+                    </div>
+                  </ion-item>
+
+                  <ion-item>
+                    <ion-segment [scrollable]="true" lines="none">
+                      <ion-segment-button value="home" class="tipvalue">23 Nov <br> Thu</ion-segment-button>
+                      <ion-segment-button value="home" class="tipvalue">RM 2.00</ion-segment-button>
+                      <ion-segment-button value="home" class="tipvalue">RM 3.00</ion-segment-button>
+                      <ion-segment-button value="home" class="tipvalue">RM 4.00</ion-segment-button>
+                      <ion-segment-button value="home" class="tipvalue">RM 5.00</ion-segment-button>
+                      <ion-segment-button value="home" class="tipvalue">RM 6.00</ion-segment-button>
+                      <ion-segment-button value="home" class="tipvalue">RM 7.00</ion-segment-button>
+                      <ion-segment-button value="home" class="tipvalue">RM 8.00</ion-segment-button>
+                      <ion-segment-button value="home" class="tipvalue">RM 9.00</ion-segment-button>
+                      <ion-segment-button value="home" class="tipvalue">RM 10.00</ion-segment-button>
+                      <ion-segment-button value="home" class="tipvalue">RM 11.00</ion-segment-button>
+                    </ion-segment>
+                  </ion-item>
+  
+                  <ion-item lines="none">
+                    <ion-button color="primary" class="continue2">Continue</ion-button>
+                  </ion-item>
+                </ion-list>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </ng-template>
+  </ion-modal> -->
+
+  <ion-modal trigger="open-other-options" [initialBreakpoint]="1" [breakpoints]="[0, 1]" class="confirm-modal" >
+    <ng-template>
+      <div class="block1">
+        <ion-grid>
+          <ion-row>
+            <ion-col size="12">
+              <ion-segment value="default" [(ngModel)]="selectedSegment">
+                <ion-segment-button value="ASAP">
+                  <ion-label>ASAP</ion-label>
+                </ion-segment-button>
+                <ion-segment-button value="Later" style="text-transform: none;">
+                  <ion-label>Later</ion-label>
+                </ion-segment-button>
+              </ion-segment>
+  
+              <div *ngIf="selectedSegment === 'ASAP'">
+                <ion-list lines="none">
+                  <ion-item lines="none" style="border-bottom: 1px solid #EEEE;">
+                    <ion-input slot="start" class="address_placeholder" placeholder="Address">
+                      <ion-icon slot="start" src="../../../assets/icon/locationorange.svg" class="location-icon"></ion-icon>
+                    </ion-input>
+                    <ion-label color="primary" slot="end" style="font-size: 13px;">Change</ion-label>
+                  </ion-item>
+  
+                  <ion-item lines="none">
+                    <ion-button color="primary" class="continue2" (click)="gotopaymentsucess()" id="open-loading">Continue</ion-button>
+                  </ion-item>
+                </ion-list>
+              </div>
+  
+              <div *ngIf="selectedSegment === 'Later'">
+
+                <ion-grid>
+                  <ion-row style="margin-top:5px;">
+                    <ion-col size="6" class="ion-text-left">
+                      <ion-label color="success" style="font-size: 16px;font-family: sf_pro_display_bold;">Pick a Day</ion-label>
+                    </ion-col>
+                    <ion-col size="6" class="ion-text-right">
+                      <ion-label color="primary" style="font-size: 13px;font-family: sf_pro_display_regular;">Next Week<ion-icon style="font-size: 16px;margin-bottom: -4px;" src="../../../assets/icon/forward.svg"></ion-icon></ion-label>
+                    </ion-col>
+                  </ion-row>
+                  <ion-row style="margin-top:5px;">
+                    <ion-col size="12">
+                      <ion-segment style="width: 100%;" [scrollable]="true" lines="none" >
+                        <ion-segment-button value="23nov" class="tipvaluemodal" checked>23 Nov <br> Thu</ion-segment-button>
+                        <ion-segment-button value="24nov" class="tipvaluemodal">24 Nov <br> Fri</ion-segment-button>  
+                        <ion-segment-button value="25nov" class="tipvaluemodal">25 Nov <br> Sat</ion-segment-button>
+                        <ion-segment-button value="26nov" class="tipvaluemodal">26 Nov <br> Sun</ion-segment-button>
+                        <ion-segment-button value="27nov" class="tipvaluemodal">27 Nov <br> Mon</ion-segment-button>
+                        <ion-segment-button value="28nov" class="tipvaluemodal">28 Nov <br> Tues</ion-segment-button>  
+                      </ion-segment>
+                    </ion-col>
+                  </ion-row>
+
+                  <ion-row style="margin-top:5px;">
+                    <ion-col size="12" class="ion-text-left">
+                      <ion-label color="success" style="font-size: 16px;font-family: sf_pro_display_bold;">Pick a Time Slot</ion-label>
+                    </ion-col>
+                  </ion-row>
+                  <ion-row style="margin-top:5px;">
+                    <ion-col size="12">
+                      <ion-segment style="width: 100%;" [scrollable]="true" lines="none" >
+                        <ion-segment-button value="7_7:30" class="timemodal" checked>7:00PM - 7:30PM</ion-segment-button>
+                        <ion-segment-button value="7:30_8:00" class="timemodal">7:30PM - 8:00PM</ion-segment-button>  
+                        <ion-segment-button value="8:00_8:30" class="timemodal">8:00PM - 8:30PM</ion-segment-button>
+                        <ion-segment-button value="8:30_9:00" class="timemodal">8:30PM - 9:00PM</ion-segment-button>
+                        <ion-segment-button value="9:00_9:30" class="timemodal">9:00PM - 9:30PM</ion-segment-button>
+                        <ion-segment-button value="9:30_10:00" class="timemodal">9:30PM - 10:00PM</ion-segment-button>  
+                      </ion-segment>
+                    </ion-col>
+                  </ion-row>
+
+                 <ion-row>
+                  <ion-col size="12">
+                    <ion-list lines="none">
+                      <ion-item lines="none" style="border-bottom: 1px solid #EEEE;">
+                        <ion-input slot="start" class="address_placeholder" placeholder="Address">
+                          <ion-icon slot="start" src="../../../assets/icon/locationorange.svg" class="location-icon"></ion-icon>
+                        </ion-input>
+                        <ion-label color="primary" slot="end" style="font-size: 12px;">Change</ion-label>
+                      </ion-item>
+                    </ion-list>
+                  </ion-col>
+                 </ion-row>
+
+                  <ion-row>
+                    <ion-col size="12">
+                      <ion-button color="primary" class="continue2" style="margin-top: 10px !important;" (click)="gotopaymentsucess()" id="open-loading">Continue</ion-button>
+
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>
+                
+               
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </ng-template>
+  </ion-modal>
+
+  <ion-modal trigger="open-confirmation-modal" [initialBreakpoint]="1" [breakpoints]="[0, 1]" class="confirm-modal">
+    <ng-template>
+      <div class="block3">
+        <ion-grid>
+          <ion-row style="margin-top: 20px;">
+            <ion-col size="2"></ion-col>
+            <ion-col size="8" class="ion-text-center">
+              <ion-avatar class="tickavatar">
+                <ion-img src="../../../assets/images/tick_circle.svg"/>
+              </ion-avatar>
+              <p class="ticklabel">Are you Sure you want to Place the Order?</p>
+              <p class="Branchname">Branch Name 1</p>
+              <p class="paymnetdesc">Proceed in placing this order of
+                <br/> RM 108.00</p>
+            </ion-col>
+            <ion-col size="2"></ion-col>
+          </ion-row>
+
+          <ion-row style="margin-bottom: 20px;">
+            
+            <ion-col size="6" class="ion-text-right">
+              <ion-button color="danger" class="closebtn"><ion-icon slot="start" name="close-circle-outline"></ion-icon>Cancel</ion-button>
+            </ion-col>
+            <ion-col size="6" class="ion-text-left">
+              <ion-button color="primary" class="checkmarkbtn" (click)="gotocheckout()" id="open-loading"><ion-icon slot="start" name="checkmark-circle-outline"></ion-icon>Confirm</ion-button>
+            </ion-col>
+            
+          </ion-row>
+        </ion-grid>
+      </div>
+    </ng-template>
+  </ion-modal>
+
+
+  <ion-modal trigger="open-confirmation1-modal" [initialBreakpoint]="1" [breakpoints]="[0, 1]" class="confirm-modal">
+    <ng-template>
+      <div class="block3">
+        <ion-grid>
+          <ion-row style="margin-top: 20px;">
+            <ion-col size="2"></ion-col>
+            <ion-col size="8" class="ion-text-center">
+              <ion-avatar class="tickavatar">
+                <ion-img src="../../../assets/images/danger.svg"/>
+              </ion-avatar>
+              <p class="ticklabel1">Insufficient Balance</p>
+              <p class="Branchname">Branch Name 1</p>
+              <p class="paymnetdesc">Please pay RM 9.22 to place <br/>the order</p>
+            </ion-col>
+            <ion-col size="2"></ion-col>
+          </ion-row>
+
+          <ion-row style="margin-bottom: 20px;">
+            
+            <ion-col size="6" class="ion-text-right">
+              <ion-button color="danger" class="closebtn"><ion-icon slot="start" name="close-circle-outline"></ion-icon>Cancel</ion-button>
+            </ion-col>
+            <ion-col size="6" class="ion-text-left">
+              <ion-button color="primary" class="checkmarkbtn" (click)="gotocheckout()" id="open-loading"><ion-icon slot="start" name="checkmark-circle-outline"></ion-icon>Pay 9.22</ion-button>
+            </ion-col>
+            
+          </ion-row>
+        </ion-grid>
+      </div>
+    </ng-template>
+  </ion-modal>
+  
+  <ion-loading trigger="open-loading" message="Loading..." duration="3000"></ion-loading>
+
+</ion-content>

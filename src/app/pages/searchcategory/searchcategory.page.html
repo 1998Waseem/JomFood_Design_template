@@ -1,0 +1,17 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+    <!-- <ion-title>searchcategory</ion-title> -->
+    <ion-buttons slot="start">
+      <ion-back-button default-href="#" color="success" icon="../../../assets/icon/arrow-left.svg"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding animate__animated animate__fadeInUpBig">
+  <ion-searchbar  placeholder="Find for food or restaurant..." class="searchbar " [debounce]="1000" (ionInput)="handleInput($event)"></ion-searchbar>
+  <ion-list *ngFor="let result of results" >
+    <ion-item>
+      <ion-label color="success">{{ result }}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

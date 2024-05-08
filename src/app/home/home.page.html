@@ -1,0 +1,377 @@
+<ion-header [translucent]="true" >
+  <ion-toolbar>
+    <ion-buttons slot="start" (click)="openMenu()" class="ion-text-left">
+        <img src="../../assets/icon/sidemenu.svg">
+    </ion-buttons>
+    <div class="logo">
+      <ion-img src="../../assets/images/logo.svg" class="logoimg" alt="dilana logo" />
+    </div>
+  
+    <ion-buttons slot="end" class="ion-text-right">
+      <img src="../../assets/icon/sidemenu.svg" style="opacity: 0;">
+  </ion-buttons>
+  
+  </ion-toolbar>
+  </ion-header>
+  <ion-content [fullscreen]="true" mode="md">
+
+    <ion-loading trigger="open-loading" message="Loading..." duration="3000"></ion-loading>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12" class="ion-text-left animate__animated animate__slideInLeft">
+          <ion-label color="success" class="maintitle">What Whould you like <br> to order</ion-label>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  
+    <ion-searchbar (click)="gotosearch()" placeholder="Find for food or restaurant..." class="searchbar animate__animated animate__zoomIn" fill="outline" show-clear-button="focus"></ion-searchbar>
+  
+    <ion-list lines="none" class="dropdownlist">
+      <ion-item lines="none" class="dropdownitem">
+         
+        <ion-select label="Most Liked Items" class="likeditems animate__animated animate__zoomIn" interface="action-sheet" style="margin-top: 10px !important;">
+          <ion-badge>6</ion-badge>
+          <ion-select-option value="apple">Apple</ion-select-option>
+          <ion-select-option value="banana">Banana</ion-select-option>
+          <ion-select-option value="orange">Orange</ion-select-option>
+        </ion-select>
+      </ion-item>
+      </ion-list>
+        
+  
+  
+        <ion-grid >
+          
+          <ion-row>
+
+            <ion-col size="12" size-sm="9" size-md="6" size-lg="4" size-xl="3" *ngFor="let result of mostpopular">
+              <ion-list lines="none" id="open-loading" class="product_list ion-no-padding animate__animated animate__slideInLeft" (click)="gotoproductdetails()" >
+                <ion-item lines="none">
+                  <!-- ion-avatar (if not used, you may consider removing it) -->
+                  <ion-avatar slot="start">
+                    <ion-img [src]="result.image_url" />
+                  </ion-avatar>
+                  <div class="item-info">
+                    <ion-row>
+                      <ion-col size="12">
+                        <p class="item_name">{{result.name}}</p>
+                      </ion-col>
+                    </ion-row>
+                    
+                    <ion-row class="delivery_info">
+                      <ion-col size="6">
+                        <p class="freedelivery"><ion-icon src="../../assets/icon/freedelivery.svg" alt="Icon"></ion-icon> <span class="freedelspan">Free delivery</span></p>
+                      </ion-col>
+                      <ion-col size="6">
+                        <p class="time"><ion-icon src="../../assets/icon/clock.svg"></ion-icon><span>10-15 mins</span></p>
+                      </ion-col>
+                    </ion-row>
+                    
+                    <ion-row class="pricepluscounter">
+                      <ion-col size="6" class="pricecol">
+                        <p class="price">${{result.price}}.00</p>
+                      </ion-col>
+                      <ion-col size="6" class="countercol">
+                        <ion-row class="counter-row">
+                          <ion-icon name="remove" color="success" class="minusicon" ></ion-icon>
+                          <span class="counter">4</span>
+                          <ion-icon name="add" class="addicon" ></ion-icon>
+                        </ion-row>
+                      </ion-col>
+                    </ion-row>
+                  </div>
+                </ion-item>
+              </ion-list>
+            </ion-col>
+           
+          </ion-row>
+         
+        </ion-grid>
+  
+     
+  
+      <!-- <ion-grid>
+        <ion-row style="margin-top: 20px;">
+          <ion-col size="10" class="categoreies">
+            <ion-label color="success" class="likeditems">Chef's Special</ion-label>&nbsp;
+            <ion-badge>06</ion-badge>
+          </ion-col>
+          <ion-col size="2" class="ion-text-right">
+            <ion-icon id="open-modal" name="caret-down-outline" style="font-size: 22px;"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-grid> -->
+  
+      <!-- <ion-list lines="none" class="dropdownlist">
+        <ion-item lines="none" class="dropdownitem">
+           
+          <ion-select label="Chef's Special ''" class="Chef animate__animated animate__zoomIn" interface="action-sheet">
+            <ion-badge>6</ion-badge>
+            <ion-select-option value="apple">Apple</ion-select-option>
+            <ion-select-option value="banana">Banana</ion-select-option>
+            <ion-select-option value="orange">Orange</ion-select-option>
+          </ion-select>
+        </ion-item>
+        </ion-list> -->
+
+        <div *ngIf="topcats">
+          <div *ngFor="let cat of topcats">
+            <ion-list lines="none" style="margin-top: -10px;">
+              <ion-item lines="none">
+                <ion-label class="Chef animate__animated animate__zoomIn">{{cat.name}}</ion-label>
+              </ion-item>
+            </ion-list>
+            <ion-grid style="margin-top: -20px !important;">
+          
+              <ion-row *ngIf="resultsnoticesfull !== ''">
+                <ng-container *ngFor="let result of resultsnoticesfull">
+                  <ng-container *ngIf="result.category_name == cat.name">
+                    <ion-col size="12" size-sm="9" size-md="6" size-lg="4" size-xl="3">
+                      <ion-list lines="none" id="open-loading" class="product_list ion-no-padding animate__animated animate__slideInLeft" (click)="gotoproductdetails()">
+                        <ion-item lines="none">
+                          <!-- ion-avatar (if not used, you may consider removing it) -->
+                          <ion-avatar slot="start">
+                            <ion-img [src]="result.image_url" />
+                          </ion-avatar>
+                          <div class="item-info">
+                            <ion-row>
+                              <ion-col size="12">
+                                <p class="item_name">Beef Samosa</p>
+                              </ion-col>
+                            </ion-row>
+                            
+                            <ion-row class="delivery_info">
+                              <ion-col size="6">
+                                <p class="freedelivery"><ion-icon src="../../assets/icon/freedelivery.svg" alt="Icon"></ion-icon> <span class="freedelspan">Free delivery</span></p>
+                              </ion-col>
+                              <ion-col size="6">
+                                <p class="time"><ion-icon src="../../assets/icon/clock.svg"></ion-icon><span>10-15 mins</span></p>
+                              </ion-col>
+                            </ion-row>
+                            
+                            <ion-row class="pricepluscounter">
+                              <ion-col size="6" class="pricecol">
+                                <p class="price">$12.00</p>
+                              </ion-col>
+                              <ion-col size="6" class="countercol">
+                                <ion-row class="counter-row">
+                                  <ion-icon name="remove" color="success" class="minusicon" ></ion-icon>
+                                  <span class="counter">4</span>
+                                  <ion-icon name="add" class="addicon" ></ion-icon>
+                                </ion-row>
+                              </ion-col>
+                            </ion-row>
+                          </div>
+                        </ion-item>
+                      </ion-list>
+                    </ion-col>
+                  </ng-container>
+                </ng-container>
+                
+                </ion-row>
+                </ion-grid>
+          </div>  
+        </div>
+        
+  
+      <ion-grid style="margin-top: -20px !important;">
+          
+        <ion-row>
+          <ion-col size="12" size-sm="9" size-md="6" size-lg="4" size-xl="3">
+            <ion-list lines="none" id="open-loading" class="product_list ion-no-padding animate__animated animate__slideInLeft" (click)="gotoproductdetails()">
+              <ion-item lines="none">
+                <!-- ion-avatar (if not used, you may consider removing it) -->
+                <ion-avatar slot="start">
+                  <ion-img src="../../../assets/images/Beefsamosa.png" />
+                </ion-avatar>
+                <div class="item-info">
+                  <ion-row>
+                    <ion-col size="12">
+                      <p class="item_name">Beef Samosa</p>
+                    </ion-col>
+                  </ion-row>
+                  
+                  <ion-row class="delivery_info">
+                    <ion-col size="6">
+                      <p class="freedelivery"><ion-icon src="../../assets/icon/freedelivery.svg" alt="Icon"></ion-icon> <span class="freedelspan">Free delivery</span></p>
+                    </ion-col>
+                    <ion-col size="6">
+                      <p class="time"><ion-icon src="../../assets/icon/clock.svg"></ion-icon><span>10-15 mins</span></p>
+                    </ion-col>
+                  </ion-row>
+                  
+                  <ion-row class="pricepluscounter">
+                    <ion-col size="6" class="pricecol">
+                      <p class="price">$12.00</p>
+                    </ion-col>
+                    <ion-col size="6" class="countercol">
+                      <ion-row class="counter-row">
+                        <ion-icon name="remove" color="success" class="minusicon" ></ion-icon>
+                        <span class="counter">4</span>
+                        <ion-icon name="add" class="addicon" ></ion-icon>
+                      </ion-row>
+                    </ion-col>
+                  </ion-row>
+                </div>
+              </ion-item>
+            </ion-list>
+          </ion-col>
+
+          <ion-col size="12" size-sm="9" size-md="6" size-lg="4" size-xl="3">
+            <ion-list lines="none" id="open-loading" class="product_list ion-no-padding animate__animated animate__slideInLeft" (click)="gotoproductdetails()">
+              <ion-item lines="none">
+                <!-- ion-avatar (if not used, you may consider removing it) -->
+                <ion-avatar slot="start">
+                  <ion-img src="../../../assets/images/Beefsamosa.png" />
+                </ion-avatar>
+                <div class="item-info">
+                  <ion-row>
+                    <ion-col size="12">
+                      <p class="item_name">Beef Samosa</p>
+                    </ion-col>
+                  </ion-row>
+                  
+                  <ion-row class="delivery_info">
+                    <ion-col size="6">
+                      <p class="freedelivery"><ion-icon src="../../assets/icon/freedelivery.svg" alt="Icon"></ion-icon> <span class="freedelspan">Free delivery</span></p>
+                    </ion-col>
+                    <ion-col size="6">
+                      <p class="time"><ion-icon src="../../assets/icon/clock.svg"></ion-icon><span>10-15 mins</span></p>
+                    </ion-col>
+                  </ion-row>
+                  
+                  <ion-row class="pricepluscounter">
+                    <ion-col size="6" class="pricecol">
+                      <p class="price">$12.00</p>
+                    </ion-col>
+                    <ion-col size="6" class="countercol">
+                      <ion-row class="counter-row">
+                        <ion-icon name="remove" color="success" class="minusicon" ></ion-icon>
+                        <span class="counter">4</span>
+                        <ion-icon name="add" class="addicon" ></ion-icon>
+                      </ion-row>
+                    </ion-col>
+                  </ion-row>
+                </div>
+              </ion-item>
+            </ion-list>
+          </ion-col>
+
+          <ion-col size="12" size-sm="9" size-md="6" size-lg="4" size-xl="3">
+            <ion-list lines="none" id="open-loading" class="product_list ion-no-padding animate__animated animate__slideInLeft" (click)="gotoproductdetails()">
+              <ion-item lines="none">
+                <!-- ion-avatar (if not used, you may consider removing it) -->
+                <ion-avatar slot="start">
+                  <ion-img src="../../../assets/images/Beefsamosa.png" />
+                </ion-avatar>
+                <div class="item-info">
+                  <ion-row>
+                    <ion-col size="12">
+                      <p class="item_name">Beef Samosa</p>
+                    </ion-col>
+                  </ion-row>
+                  
+                  <ion-row class="delivery_info">
+                    <ion-col size="6">
+                      <p class="freedelivery"><ion-icon src="../../assets/icon/freedelivery.svg" alt="Icon"></ion-icon> <span class="freedelspan">Free delivery</span></p>
+                    </ion-col>
+                    <ion-col size="6">
+                      <p class="time"><ion-icon src="../../assets/icon/clock.svg"></ion-icon><span>10-15 mins</span></p>
+                    </ion-col>
+                  </ion-row>
+                  
+                  <ion-row class="pricepluscounter">
+                    <ion-col size="6" class="pricecol">
+                      <p class="price">$12.00</p>
+                    </ion-col>
+                    <ion-col size="6" class="countercol">
+                      <ion-row class="counter-row">
+                        <ion-icon name="remove" color="success" class="minusicon" ></ion-icon>
+                        <span class="counter">4</span>
+                        <ion-icon name="add" class="addicon" ></ion-icon>
+                      </ion-row>
+                    </ion-col>
+                  </ion-row>
+                </div>
+              </ion-item>
+            </ion-list>
+          </ion-col>
+
+          <ion-col size="12" size-sm="9" size-md="6" size-lg="4" size-xl="3">
+            <ion-list lines="none" id="open-loading" class="product_list ion-no-padding animate__animated animate__slideInLeft" (click)="gotoproductdetails()">
+              <ion-item lines="none">
+                <!-- ion-avatar (if not used, you may consider removing it) -->
+                <ion-avatar slot="start">
+                  <ion-img src="../../../assets/images/Beefsamosa.png" />
+                </ion-avatar>
+                <div class="item-info">
+                  <ion-row>
+                    <ion-col size="12">
+                      <p class="item_name">Beef Samosa</p>
+                    </ion-col>
+                  </ion-row>
+                  
+                  <ion-row class="delivery_info">
+                    <ion-col size="6">
+                      <p class="freedelivery"><ion-icon src="../../assets/icon/freedelivery.svg" alt="Icon"></ion-icon> <span class="freedelspan">Free delivery</span></p>
+                    </ion-col>
+                    <ion-col size="6">
+                      <p class="time"><ion-icon src="../../assets/icon/clock.svg"></ion-icon><span>10-15 mins</span></p>
+                    </ion-col>
+                  </ion-row>
+                  
+                  <ion-row class="pricepluscounter">
+                    <ion-col size="6" class="pricecol">
+                      <p class="price">$12.00</p>
+                    </ion-col>
+                    <ion-col size="6" class="countercol">
+                      <ion-row class="counter-row">
+                        <ion-icon name="remove" color="success" class="minusicon" ></ion-icon>
+                        <span class="counter">4</span>
+                        <ion-icon name="add" class="addicon" ></ion-icon>
+                      </ion-row>
+                    </ion-col>
+                  </ion-row>
+                </div>
+              </ion-item>
+            </ion-list>
+          </ion-col>
+        </ion-row>
+       
+      </ion-grid>
+    
+  
+  </ion-content>
+  
+  <!-- <app-footer></app-footer> -->
+  
+  
+  <ion-footer class="productdetailsfooter animate__animated animate__fadeInUpBig">
+    <ion-toolbar>
+      <ion-tabs>
+        <ion-tab-bar slot="bottom">
+          <ion-tab-button tab="home" (click)="gotohome()" class="footericons">
+            <ion-img src="../../assets/icon/homeorange.svg"></ion-img>
+           <ion-label class="menuname">Home</ion-label> 
+          </ion-tab-button>
+          <ion-tab-button tab="credits" (click)="gotocredit()" class="footericons">
+            <ion-img src="../../assets/icon/card-tick.svg"></ion-img>
+            <ion-label class="menuname">Credits</ion-label>
+          </ion-tab-button>
+          <ion-tab-button tab="Cart" (click)="gotocart()" class="footericons">
+            <ion-img src="../../assets/icon/shopping-cart.svg"></ion-img>
+            <ion-label class="menuname">Cart</ion-label>
+          </ion-tab-button>
+          <ion-tab-button tab="Orders" (click)="gotoorders()" class="footericons">
+            <ion-img src="../../assets/icon/order.svg"></ion-img>
+            <ion-label class="menuname">Orders</ion-label> 
+          </ion-tab-button>
+          <ion-tab-button tab="Profile" (click)="gotoprofile()">
+            <ion-img src="../../assets/icon/profile.svg"></ion-img>
+            <ion-label class="menuname">Profile</ion-label>
+          </ion-tab-button>
+        </ion-tab-bar>
+      </ion-tabs>
+    </ion-toolbar>
+  </ion-footer>

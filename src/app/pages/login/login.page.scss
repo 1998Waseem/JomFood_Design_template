@@ -1,0 +1,159 @@
+.signupmainclass ion-label{
+  font-size: 32px;
+  font-weight: bold;
+  font-family: sf_pro_display_semibold;
+}
+.inputfield{
+    margin-top: 30px;
+}
+
+.inputfield ion-label{
+  font-size: 14px;
+  color: #9897A1;
+  font-family: sf_pro_display_regular;
+}
+.email{
+  --color: var(--ion-color-success);
+  font-size: 15px;
+  font-family: sf_pro_display_regular;
+  --border-radius: 10px;
+  --border: 1px solid #EEEEEE;
+  height: 57px;
+  --border-color: var(--ion-color-gray);
+  --placeholder-color: #C4C4C4;
+}
+.email:focus {
+    border-radius: 1.3vh;
+    border: 1px solid #FC7A1E;
+    color: #16294C;
+}
+
+::placeholder{
+    color: #C4C4C4 !important;
+}
+
+/* Change the color of the placeholder text for Ionic input elements */
+ion-input::part(input)::placeholder {
+  color: #C4C4C4; /* Change this to your desired color */
+}
+
+.signupbutton{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.buttons{
+  // position: sticky;
+  //   bottom: 0;
+  //   top: auto;
+  //   left: 0;
+  //   right: 0;
+  //   text-align: center;
+  margin-top: 2.61vh;
+}
+
+.afterbtntext{
+  margin-top: 20px;
+    text-align: center;
+    font-family: sf_pro_display_medium;
+    font-size: 12px;
+}
+
+.signin {
+  display: flex;
+  flex-direction: row;
+  color:5B5B5E;
+  font-family: sf_pro_display_medium;
+  font-size: 13px;
+}
+  .signin:before, .signin:after{
+    content: "";
+    flex: 1 1;
+    border-bottom: 1px solid #D8D8D8;
+    margin: auto;
+  }
+  .signin:before {
+    margin-right: 10px
+  }
+  .signin:after {
+    margin-left: 10px
+  }
+
+  .socialiconbtn{
+    height: 50px;
+  }
+  .email{
+    margin-top: 8px;
+  }
+  .login_btn{
+    width: 142px;
+    height: 45px;
+    font-family: sf_pro_display_semibold;
+    --border-radius: 10px;
+    font-size: 13px;
+    letter-spacing: 1px;
+  }
+
+  .forgotpassword{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    font-family: sf_pro_display_medium;
+  }
+  // .social_btn{
+  //   height: 60px;
+  //   text-transform: none;
+  //   font-family: sf_pro_display_regular;
+  //   font-size: 13px;
+  //   --border-radius:10px;
+  //   width: 100%;
+  //  }
+  //  .social_btn ion-icon{
+  //   font-size: 25px;
+  //  }
+  .social_btn {
+    height: 53px;
+    text-transform: none;
+    font-family: sf_pro_display_regular;
+    font-size: 12px;
+    --border-radius: 10px;
+    width: 100%;
+  }
+  
+  .social_btn ion-icon {
+    font-size: 23px;
+    margin-left: 0px;
+    margin-right: 10px;
+  }
+  
+  .guest_btn{
+    background: #FEDCC4;
+    color: #192C4E;
+    border: 1px solid #F68637;
+    border-radius: 10px;
+    width: 212px;
+    font-size: 15px;
+    font-family: sf_pro_display_medium;
+    height: 38px;
+    line-height: 0;
+    margin-top: -5px;
+}
+.animation{
+  background-image: url(../../../assets/images/e1.svg);
+  width: 206px !important;
+  height: 174px;
+  background-size: cover;
+  margin-left: -54px;
+  margin-top: -79px !important;
+  padding: 43px;
+}
+
+.animation1{
+  background-image: url(../../../assets/images/Ellipseright.svg);
+    width: 181px !important;
+    background-size: cover;
+    margin-top: -165px;
+    margin-left: 93%;
+    height: 181px;
+    background-position-x: right;
+}

@@ -1,0 +1,7 @@
+{
+  "name": "JomFood",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

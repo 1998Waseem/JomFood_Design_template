@@ -1,0 +1,210 @@
+ion-toolbar ion-title{
+    font-size: 30px;
+    font-family: sf_pro_display_bold;
+    text-align: center;
+}
+
+.order_number{
+    font-size: 15px;
+    font-family: sf_pro_display_bold;
+    color: var(--ion-color-success);
+    margin-top: 0px;
+    margin-bottom: 3px;
+}
+ion-segment-button ion-label{
+    text-transform: none;
+    font-size: 16px;
+    font-family: sf_pro_display_semibold;
+}
+.order_id{
+    font-size: 15px;
+    font-family: sf_pro_display_bold;
+    color:var(--ion-color-success);
+}
+ion-badge span{
+    position: relative;
+    top: 1px;
+    left: 1px;
+    bottom: 0px;
+}
+.delivered_order{
+    font-size: 14px;
+    font-family: sf_pro_display_bold;
+    color: #83878F;
+}
+.date{
+    font-size: 13px;
+    font-family: sf_pro_display_regular;
+    color: #83878F;
+    margin-top: -10px;
+    margin-bottom: 38px;
+}
+
+.writerreviews{
+    color: var(--ion-color-primary);
+    margin-top: 20px;
+    font-family: sf_pro_display_regular;
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+.callbtn{
+    --border-radius:50%;
+    height: 40px;
+    margin-left: 20px;
+    margin-top: -10px;
+}
+
+// .info ion-label span{
+// font-family: sf_pro_display_regular;
+// }
+
+.info{
+    border: 2px solid #83878F;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.info, .boldtext{
+    font-family: sf_pro_display_bold;
+    color:#83878F;
+}
+
+.info, .thintext{
+    font-family: sf_pro_display_regular;
+    color:#83878F;
+}
+
+.orderdate{
+    font-family: sf_pro_display_regular;
+    font-size: 14px;
+}
+
+.slivertext{
+    color: var(--ion-color-tertiary);
+    font-size: 15px;
+    font-family: sf_pro_display_regular;
+}
+.darktext{
+    color: var(--ion-color-success);
+    font-size: 15px;
+}
+
+.itemtext{
+    color: var(--ion-color-tertiary);
+    font-size: 14px;
+}
+.itemcount{
+    color: var(--ion-color-tertiary);
+    font-size: 13px;
+    // margin-right: -20px;
+    font-family: sf_pro_display_regular;
+
+}
+.itemname{
+    font-size: 14px;
+    font-family: sf_pro_display_regular;
+    text-align: left;
+    color:var(--ion-color-success) !important;
+    // position: relative;
+    // right: 60px;
+
+}
+.itemsubtotal{
+    font-size: 14px;
+    font-family: sf_pro_display_regular;
+    text-align: left;
+}
+.itemsubprice{
+    font-size: 14px;
+    font-family: sf_pro_display_medium;
+}
+.itemprice{
+    font-size: 18px;
+    font-family: sf_pro_display_medium;
+    text-align: right;
+}
+
+.Subtotal{
+    color: #B9BFC9;
+    font-family: sf_pro_display_bold;
+    font-size: 14px;
+}
+.gandtotal{
+    font-family: sf_pro_display_bold;
+    font-size: 14px;
+}
+
+.Orderdetails{
+    border-bottom: 1px solid #D3D1D8;
+    position: relative;
+    top: -10px;
+}
+
+.picked{
+    margin-right: 10px;
+    height: 100px !important;
+    margin-left: -10px;
+    margin-top: 2px;
+}
+.trackbtn{
+    width: 77px;
+    height: 32px;
+    --border-radius: 5px;
+    text-transform: none;
+    font-size: 14px;
+    font-family: sf_pro_display_regular;
+    margin-bottom: -30px;
+    margin-top: -70px;
+    
+}
+.trackicon{
+    width: 14px;
+    height: 14px;
+    margin-right: 5px;
+}
+
+.drivername{
+    font-size: 12px;
+    margin-top: -20px;
+    font-family: sf_pro_display_bold;
+    color: var(--ion-color-tertiary);
+}
+.drivername span{
+    font-size: 10px;
+    font-family: sf_pro_display_regular;
+}
+.driveritem{
+      margin-top: -20px;
+}
+.driverdetails{
+    height: 85px;
+    border: 1px solid #8C9099;
+    width: 254px;
+    padding: 24px 47px 14px 0px;
+    border-radius: 10px;
+    margin-top: -24px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+.Subtotalwithbadge{
+    color: #B9BFC9;
+    font-family: sf_pro_display_bold;
+    font-size: 14px;
+    position: relative;
+    top: -2px;
+}
+.borderbottom{
+    border-bottom: 1px solid #D3D1D8; 
+        
+}
+.itemlisting{
+    margin-top: -15px;
+}
+.grandtotal{
+    font-size: 14px;
+    font-family: sf_pro_display_bold;
+}

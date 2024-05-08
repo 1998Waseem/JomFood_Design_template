@@ -1,0 +1,143 @@
+
+  <ion-toolbar class="ion-text-center">
+    <ion-buttons slot="start" (click)="gotohome()">
+      <ion-back-button default-href="#" color="success" icon="../../../assets/icon/arrow-left.svg"></ion-back-button>
+    </ion-buttons>
+    <ion-title color="success">Profile</ion-title>
+    <ion-buttons slot="end">
+   
+      <ion-icon src="../../../assets/icon/arrow-left.svg" style="opacity: 0;"/>
+   
+  </ion-buttons>
+  </ion-toolbar>
+
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <ion-list lines="none" class="profilelist">
+    <ion-item lines="none" class="profileitem animate__animated animate__slideInLeft">
+      <ion-avatar>
+        <ion-img src="../../../assets/images/profile.png" />
+      </ion-avatar>
+  
+      <ion-grid class="profile_col">
+        <ion-row style="margin-top: 14px;">
+          <ion-col>
+            <ion-label color="success" class="name">Farion Wick</ion-label>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-label color="medium" class="email">farionwick&#64;gmail.com</ion-label>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+  </ion-list>
+
+
+  <div class="personal_info animate__animated animate__slideInRight">
+  <ion-list lines="none" class="personal_info_list">
+    <ion-item lines="none" class="personal_info_item">
+      <ion-label slot="start" color="success" class="personal_info_head">Personal Info</ion-label>
+      <ion-icon slot="end" src="../../../assets/icon/edit.svg" (click)="gotoeditprofile()"/>
+    </ion-item>
+  </ion-list>
+
+  <ion-list lines="none" style="margin-top: -10px;">
+    <ion-item lines="none">
+      <ion-img src="../../../assets/icon/fullname.svg" />
+      <ion-grid class="fullname_col">
+        <ion-row>
+          <ion-col>
+            <ion-label color="success" class="firstname">Full Name</ion-label>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-label color="medium" class="lastname">Farion Wick</ion-label>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+  </ion-list>
+
+
+  <ion-list lines="none" style="margin-top: 7px;">
+    <ion-item lines="none">
+      <ion-img src="../../../assets/icon/emailcircle.svg" />
+      <ion-grid class="fullname_col">
+        <ion-row>
+          <ion-col>
+            <ion-label color="success" class="firstname">Email</ion-label>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-label color="medium" class="lastname">farionwick&#64;gmail.com</ion-label>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+  </ion-list>
+
+  <ion-list lines="none" style="margin-top: 7px;">
+    <ion-item lines="none">
+      <ion-img src="../../../assets/icon/phonecircle.svg" />
+      <ion-grid class="fullname_col">
+        <ion-row>
+          <ion-col>
+            <ion-label color="success" class="firstname">Phone Number</ion-label>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-label color="medium" class="lastname">+12 34 56 78 9</ion-label>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+  </ion-list>
+
+</div>
+
+<div class="address animate__animated animate__slideInLeft">
+  <ion-list lines="none" class="personal_info_list">
+    <ion-item lines="none" class="personal_info_item">
+      <ion-label slot="start" color="success" class="personal_info_head">My Address</ion-label>
+      <ion-icon slot="end" src="../../../assets/icon/edit.svg"  (click)="gotoeditaddress()"/>
+    </ion-item>
+  </ion-list>
+</div>
+  
+  
+</ion-content>
+
+<ion-footer class="productdetailsfooter animate__animated animate__fadeInUpBig">
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="home" (click)="gotohome()" class="footericons">
+          <ion-img src="../../assets/icon/homeorange.svg"></ion-img>
+         <ion-label class="menuname">Home</ion-label> 
+        </ion-tab-button>
+        <ion-tab-button tab="credits" (click)="gotocredit()" class="footericons">
+          <ion-img src="../../assets/icon/card-tick.svg"></ion-img>
+          <ion-label class="menuname">Credits</ion-label>
+        </ion-tab-button>
+        <ion-tab-button tab="Cart" (click)="gotocart()" class="footericons">
+          <ion-img src="../../assets/icon/shopping-cart.svg"></ion-img>
+          <ion-label class="menuname">Cart</ion-label>
+        </ion-tab-button>
+        <ion-tab-button tab="Orders" (click)="gotoorders()" class="footericons">
+          <ion-img src="../../assets/icon/order.svg"></ion-img>
+          <ion-label class="menuname">Orders</ion-label> 
+        </ion-tab-button>
+        <ion-tab-button tab="Profile" (click)="gotoprofile()">
+          <ion-img src="../../assets/icon/profile.svg"></ion-img>
+          <ion-label class="menuname">Profile</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

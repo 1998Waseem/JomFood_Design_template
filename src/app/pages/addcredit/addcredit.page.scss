@@ -1,0 +1,100 @@
+.logoimg{
+    width: 191px;
+    height: 48px;
+    margin: 0px auto;
+  }
+  
+.MyCredit{
+    font-size: 22px;
+    font-family: sf_pro_display_bold;
+}
+.topuphead{
+    font-size: 10px;
+    font-family: sf_pro_display_regular;
+    position: relative;
+    top: -6px;
+}
+.money{
+    width: 100%;
+    height: 35px;
+    font-size: 16px;
+    font-family: sf_pro_display_regular;
+    border-radius: 10px;
+    background: var(--ion-color-light);
+    color: var(--ion-color-success);
+    box-sizing: border-box !important;
+    box-shadow: 6px -3px 7px 3px #E3E3E3;
+   
+}
+.money:focus{
+    background: var(--ion-color-primary);
+    color: #ffff;
+  }
+ion-button.money:focus{
+    background: #FC7A1E;
+}
+
+// .money:hover{
+//     background-color: #FC7A1E;
+// }
+
+.inputlabel{
+    font-size: 12px;
+    font-family: sf_pro_display_regular;
+}
+
+ion-input{
+    --placeholder-color: #8C9099;
+    font-size: 12px;
+    font-family: sf_pro_display_regular;
+}
+
+.topupbtn{
+    width: 224px;
+    height: 50px;
+    text-transform: none;
+    font-size: 18px;
+    font-family: sf_pro_display_bold;
+    --border-radius: 10px;
+}
+
+.block {
+    width: 100%;
+    height: 295px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+ion-modal {
+    --height: auto;
+    --border-radius: 30px 30px 0px 0px;
+    --text-align: center;
+}
+
+ion-avatar{
+    margin: auto;
+    width: 65px;
+    height: 65px;
+}
+.ticklabel{
+    font-size: 16px;
+    font-family: sf_pro_display_bold;
+    color: var(--ion-color-success);
+}
+.closebtn{
+    width: 118px;
+    height: 46px;
+    --border-radius: 10px;
+    text-transform: none;
+    font-size: 14.5px;
+}
+
+.checkmarkbtn{
+    width: 118px;
+    height: 46px;
+    --border-radius: 10px;
+    text-transform: none;
+    font-size: 14.5px;
+}

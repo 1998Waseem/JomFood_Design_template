@@ -1,0 +1,115 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="ion-text-center">
+    <ion-title color="success">Messages</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="#" color="dark" icon="../../../assets/icon/arrow-left.svg"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+   
+      <ion-icon src="../../../assets/icon/arrow-left.svg" style="opacity: 0;"/>
+   
+  </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding animate__animated animate__slideInLeft">
+   
+<!-- <ion-grid>
+  <ion-row>
+    <ion-col size="12"> -->
+      <ion-list lines="full" (click)="gotochat()">
+        <ion-item >
+          <ion-img  class="profileimg" slot="start" src="../../../assets/icon/online.svg" />
+          <ion-row>
+            <ion-col size="12" class="nameandmessages">
+              <p class="name">Royal Parvej</p>
+              <p class="message">Sounds awesome!</p>
+            </ion-col>
+
+            
+          </ion-row>
+          <div slot="end" class="ion-text-center timecol">
+            <p class="time">19:37</p>
+            <ion-badge ><span>1</span></ion-badge>
+          </div>
+        </ion-item>
+      </ion-list>
+
+      <ion-list lines="full">
+        <ion-item >
+          <ion-img  class="profileimg" slot="start" src="../../../assets/icon/online.svg" />
+          <ion-row>
+            <ion-col size="12" class="nameandmessages">
+              <p class="name">Cameron Williamson</p>
+              <p class="message">Ok, Just hurry up little bit...😊</p>
+            </ion-col>
+
+            
+          </ion-row>
+          <div slot="end" class="ion-text-center timecol">
+            <p class="time">19:37</p>
+            <ion-badge ><span>2</span></ion-badge>
+          </div>
+        </ion-item>
+      </ion-list>
+
+      <ion-list lines="full">
+        <ion-item >
+          <ion-img  class="profileimg" slot="start" src="../../../assets/icon/online.svg" />
+          <ion-row>
+            <ion-col size="12" class="nameandmessages">
+              <p class="name">Ralph Edwards</p>
+              <p class="messageseen">Thanks dude.</p>
+            </ion-col>
+
+            
+          </ion-row>
+          <div slot="end" class="ion-text-center timecol">
+            <p class="time" style="margin-top: -10px;">19:37</p>
+          </div>
+        </ion-item>
+      </ion-list>
+
+      
+
+      <ion-list lines="full">
+        <ion-item >
+          <ion-img  class="profileimg" slot="start" src="../../../assets/icon/online.svg" />
+          <ion-row>
+            <ion-col size="12" class="nameandmessages">
+              <p class="name">Cody Fisher</p>
+              <p class="messageseen">How is going...?</p>
+            </ion-col>
+
+            
+          </ion-row>
+          <div slot="end" class="ion-text-center timecol">
+            <p class="time" style="margin-top: -10px;">19:37</p>
+          </div>
+        </ion-item>
+      </ion-list>
+
+      <ion-list lines="full">
+        <ion-item >
+          <ion-img  class="profileimg" slot="start" src="../../../assets/icon/offline.svg" />
+          <ion-row>
+            <ion-col size="12" class="nameandmessages">
+              <p class="name">Eleanor Pena</p>
+              <p class="messageseen">Thanks for the awesome food man...!</p>
+            </ion-col>
+
+            
+          </ion-row>
+          <div slot="end" class="ion-text-center timecol">
+            <p class="time" style="margin-top: -10px;">19:37</p>
+          </div>
+        </ion-item>
+      </ion-list>
+    <!-- </ion-col>
+  </ion-row>
+
+  
+</ion-grid> -->
+  
+
+</ion-content>

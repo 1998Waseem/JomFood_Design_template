@@ -1,0 +1,144 @@
+
+  <ion-toolbar class="ion-text-center">
+    <ion-buttons slot="start">
+      <ion-back-button default-href="#" color="success" icon="../../../assets/icon/arrow-left.svg"></ion-back-button>
+    </ion-buttons>
+    <ion-title color="success">My Orders</ion-title>
+    <ion-buttons slot="end">
+   
+      <ion-icon src="../../../assets/icon/arrow-left.svg" style="opacity: 0;"/>
+   
+  </ion-buttons>
+  </ion-toolbar>
+
+
+<ion-content [fullscreen]="true" class="ion-padding bottom-border-list">
+  
+    <!-- <ion-item>
+       
+      <ion-img src="../../../assets/icon/person.svg"></ion-img>
+      <ion-label color="success" class="name">Jhon Deo</ion-label>
+  
+      <ion-label slot="end" color="success" class="price ion-text-right">RM 30.50</ion-label>
+
+      <ion-label slot="start">Order ID: </ion-label><ion-label>#2022352156</ion-label>
+    </ion-item> -->
+
+   
+    <ion-grid class="animate__animated animate__slideInLeft" (click)="gotoorderdetails()">
+      <ion-row>
+        <ion-col size="6" class="ion-text-left">
+          <p class="name personcol"><img src="../../../assets/icon/person.svg">Jhon Deo</p>
+        </ion-col>
+        <ion-col size="6" class="ion-text-right">
+          <p class="price">RM 30.50</p>
+        </ion-col>
+      </ion-row>
+      <ion-row class="order_info_col">
+        <ion-col size="6" class="ion-text-left">
+          <ion-label color="medium" class="order_id_head">Order ID: </ion-label><ion-label color="success" class="order_id">#2022352156</ion-label>
+        </ion-col>
+        <ion-col size="6" class="ion-text-right">
+          <ion-label color="success" class="date">Nov 24, 2023 - 15:36</ion-label>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12" class="ion-text-left">
+          <ion-label color="medium" class="pickedup">Self-Pickup/Ready by 6PM</ion-label>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12" class="ion-text-left">
+          <ion-label color="medium" class="order_head">Order:</ion-label><ion-label color="success" class="order_item">Kabsa x1, Chicken Karahi x2, Mutton Biryani x3,</ion-label>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-grid class="animate__animated animate__slideInRight" (click)="gotoorderdetails()">
+      <ion-row>
+        <ion-col size="6" class="ion-text-left">
+          <p class="name personcol"><img src="../../../assets/icon/person.svg">Jhon Deo</p>
+        </ion-col>
+        <ion-col size="6" class="ion-text-right">
+          <p class="price">RM 30.50</p>
+        </ion-col>
+      </ion-row>
+      <ion-row class="order_info_col">
+        <ion-col size="6" class="ion-text-left">
+          <ion-label color="medium" class="order_id_head">Order ID: </ion-label><ion-label color="success" class="order_id">#2022352156</ion-label>
+        </ion-col>
+        <ion-col size="6" class="ion-text-right">
+          <ion-label color="success" class="date">Nov 24, 2023 - 15:36</ion-label>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12" class="ion-text-left">
+          <ion-label color="medium" class="pickedup">Lalamove/Now</ion-label>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12" class="ion-text-left">
+          <ion-label color="medium" class="order_head">Order:</ion-label><ion-label color="success" class="order_item">Kabsa x1, Chicken Karahi x2, Mutton Biryani x3,</ion-label>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-grid class="animate__animated animate__slideInLeft" (click)="gotoorderdetails()">
+      <ion-row>
+        <ion-col size="6" class="ion-text-left">
+          <p class="name personcol"><img src="../../../assets/icon/person.svg">Jhon Deo</p>
+        </ion-col>
+        <ion-col size="6" class="ion-text-right">
+          <p class="price">RM 30.50</p>
+        </ion-col>
+      </ion-row>
+      <ion-row class="order_info_col">
+        <ion-col size="6" class="ion-text-left">
+          <ion-label color="medium" class="order_id_head">Order ID: </ion-label><ion-label color="success" class="order_id">#2022352156</ion-label>
+        </ion-col>
+        <ion-col size="6" class="ion-text-right">
+          <ion-label color="success" class="date">Nov 24, 2023 - 15:36</ion-label>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12" class="ion-text-left">
+          <ion-label color="medium" class="pickedup">Self-Pickup/Ready by 6PM</ion-label>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12" class="ion-text-left">
+          <ion-label color="medium" class="order_head">Order:</ion-label><ion-label color="success" class="order_item">Kabsa x1, Chicken Karahi x2, Mutton Biryani x3,</ion-label>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  
+</ion-content>
+
+<ion-footer class="productdetailsfooter animate__animated animate__fadeInUpBig">
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="home" (click)="gotohome()" class="footericons">
+          <ion-img src="../../assets/icon/homeorange.svg"></ion-img>
+         <ion-label class="menuname">Home</ion-label> 
+        </ion-tab-button>
+        <ion-tab-button tab="credits" (click)="gotocredit()" class="footericons">
+          <ion-img src="../../assets/icon/card-tick.svg"></ion-img>
+          <ion-label class="menuname">Credits</ion-label>
+        </ion-tab-button>
+        <ion-tab-button tab="Cart" (click)="gotocart()" class="footericons">
+          <ion-img src="../../assets/icon/shopping-cart.svg"></ion-img>
+          <ion-label class="menuname">Cart</ion-label>
+        </ion-tab-button>
+        <ion-tab-button tab="Orders" (click)="gotoorders()" class="footericons">
+          <ion-img src="../../assets/icon/order.svg"></ion-img>
+          <ion-label class="menuname">Orders</ion-label> 
+        </ion-tab-button>
+        <ion-tab-button tab="Profile" (click)="gotoprofile()">
+          <ion-img src="../../assets/icon/profile.svg"></ion-img>
+          <ion-label class="menuname">Profile</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

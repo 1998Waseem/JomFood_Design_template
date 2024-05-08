@@ -1,0 +1,104 @@
+ion-title{
+    font-size: 30px;
+    font-family: sf_pro_display_bold;
+}
+
+ion-header, ion-footer{
+    box-shadow: none;
+}
+
+.message{
+    background: #FF7622;
+    border-radius: 10px;
+    color: #fff;
+    padding: 15px;
+    overflow-x: auto; 
+    font-family: sf_pro_display_regular;
+    font-size: 12px;
+    max-width: 200px;
+   p {
+    margin: 0;
+   }
+}
+.couriermessage{
+    background: #F0F5FA;
+    border-radius: 10px;
+    color: #32343E;
+    padding: 12px;
+    overflow-x: auto; 
+    font-family: sf_pro_display_regular;
+    font-size: 12px;
+    max-width: 200px;
+    padding: 15px;
+    p {
+        margin: 0;
+    }
+}
+
+.check{
+    font-size: 13px;
+    margin-top: 40px;
+    margin-right: 0px;
+}
+
+.sender{
+    float: right;
+}
+.receiver{
+    float: left;
+}
+.senderrow{
+    //line-height: 0px;
+}
+
+.senderimg{
+    margin-left: 8px;
+    position: relative;
+    top: 16px;
+    width: 38px;
+    height: 38px;
+
+}
+.time p{
+    font-family: sf_pro_display_regular;
+    font-size: 10px;
+    color: #ABABAB;
+}
+
+.courierimg{
+    margin-right: 8px;
+    width: 38px;
+    height: 38px;
+    position: relative;
+    top: 16px;
+}
+
+.inputfield{
+    --background:#F0F5FA;
+    --border-radius: 10px;
+   
+}
+ ion-input{
+    font-size: 12px !important;
+    color: #8C9099;
+}
+.sendicon{
+    font-size: 35px;
+}
+
+::placeholder{
+    font-size:10px
+}
+
+ion-item{
+    margin-top: -12px;
+}
+
+#itemid{
+    margin-top: -22px;
+}
+
+ion-input{
+    --placeholder-color:#8C9099;
+    font-size: 10px;
+}

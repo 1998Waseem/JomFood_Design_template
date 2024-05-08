@@ -1,0 +1,134 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start" (click)="openMenu()" class="ion-text-left">
+        <img src="../../assets/icon/sidemenu.svg">
+    </ion-buttons>
+    <div class="logo">
+      <ion-img src="../../assets/images/logo.svg" class="logoimg" alt="dilana logo" />
+    </div>
+  
+    <ion-buttons slot="end" class="ion-text-right">
+      <img src="../../assets/icon/sidemenu.svg" style="opacity: 0;">
+  </ion-buttons>
+  
+  </ion-toolbar>
+  </ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" class="ion-text-left animate__animated animate__slideInLeft">
+        <ion-label color="success" class="MyCredit">My Credit</ion-label>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" class="ion-text-left animate__animated animate__slideInRight">
+        <ion-label color="success" class="topuphead">1. Select a top-up value</ion-label>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid class="animate__animated animate__zoomIn">
+    <ion-row>
+      <ion-col size="1"></ion-col>
+      <ion-col size="5" class="ion-text-right">
+        <button class="money">RM 20.00</button>
+      </ion-col>
+      <ion-col size="5" class="ion-text-left">
+        <button  class="money">RM 50.00</button>
+      </ion-col>
+      <ion-col size="1"></ion-col>
+      
+    </ion-row>
+    <ion-row>
+      <ion-col size="1"></ion-col>
+      <ion-col size="5" class="ion-text-right">
+        <button class="money">RM 100.00</button>
+      </ion-col>
+      <ion-col size="5" class="ion-text-left">
+        <button  class="money">RM 150.00</button>
+      </ion-col>
+      <ion-col size="1"></ion-col>
+      
+    </ion-row>
+  </ion-grid>
+
+  <ion-list class="ion-no-padding" style="margin-top: 10px;">
+    <ion-item class="animate__animated animate__slideInLeft">
+    <ion-input type="number" color="primary" placeholder="Or enter amount to top-up" class="ion-no-padding"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" class="ion-text-center animate__animated animate__slideInRight">
+        <ion-button class="topupbtn" id="open-confirmation-modal">Top-up Now</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  <ion-modal trigger="open-confirmation-modal" [initialBreakpoint]="1" [breakpoints]="[0, 1]" class="confirm-modal">
+    <ng-template>
+      <div class="block">
+        <ion-grid>
+          <ion-row>
+            <ion-col size="2"></ion-col>
+            <ion-col size="8" class="ion-text-center">
+              <ion-avatar class="tickavatar">
+                <ion-img src="../../../assets/images/question.png"/>
+              </ion-avatar>
+              <p class="ticklabel">Confirm to top-up<br> RM20.00?</p>
+              
+              <p style="font-family: sf_pro_display_regular;font-size: 14.6px;color: var(--ion-color-success);">You will be redirected to Molpay <br> payment gateway.</p>
+            </ion-col>
+            <ion-col size="2"></ion-col>
+          </ion-row>
+
+          <ion-row>
+            
+            <ion-col size="6" class="ion-text-right">
+              <ion-button color="danger" class="closebtn"><ion-icon slot="start" name="close-circle-outline"></ion-icon>Cancel</ion-button>
+            </ion-col>
+            <ion-col size="6" class="ion-text-left">
+              <ion-button color="primary" class="checkmarkbtn" (click)="gotocredit()"><ion-icon slot="start" name="checkmark-circle-outline"></ion-icon>Confirm</ion-button>
+            </ion-col>
+            
+          </ion-row>
+        </ion-grid>
+      </div>
+    </ng-template>
+  </ion-modal>
+
+</ion-content>
+
+<ion-footer class="productdetailsfooter animate__animated animate__fadeInUpBig">
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="home" (click)="gotohome()" class="footericons">
+          <ion-img src="../../assets/icon/homeorange.svg"></ion-img>
+         <ion-label class="menuname">Home</ion-label> 
+        </ion-tab-button>
+        <ion-tab-button tab="credits" (click)="gotocredit()" class="footericons">
+          <ion-img src="../../assets/icon/card-tick.svg"></ion-img>
+          <ion-label class="menuname">Credits</ion-label>
+        </ion-tab-button>
+        <ion-tab-button tab="Cart" (click)="gotocart()" class="footericons">
+          <ion-img src="../../assets/icon/shopping-cart.svg"></ion-img>
+          <ion-label class="menuname">Cart</ion-label>
+        </ion-tab-button>
+        <ion-tab-button tab="Orders" (click)="gotoorders()" class="footericons">
+          <ion-img src="../../assets/icon/order.svg"></ion-img>
+          <ion-label class="menuname">Orders</ion-label> 
+        </ion-tab-button>
+        <ion-tab-button tab="Profile" (click)="gotoprofile()">
+          <ion-img src="../../assets/icon/profile.svg"></ion-img>
+          <ion-label class="menuname">Profile</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

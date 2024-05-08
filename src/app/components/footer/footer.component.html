@@ -1,0 +1,24 @@
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="home">
+      <ion-img src="../../assets/icon/homeorange.svg"></ion-img>
+     Home
+    </ion-tab-button>
+    <ion-tab-button tab="credits" (click)="gotocredit()">
+      <ion-img src="../../assets/icon/card-tick.svg"></ion-img>
+      Credits
+    </ion-tab-button>
+    <ion-tab-button tab="Cart">
+      <ion-img src="../../assets/icon/shopping-cart.svg"></ion-img>
+      Cart
+    </ion-tab-button>
+    <ion-tab-button tab="Orders" (click)="gotoorders()">
+      <ion-img src="../../assets/icon/order.svg"></ion-img>
+      Orders
+    </ion-tab-button>
+    <ion-tab-button tab="Profile" (click)="gotoprofile()">
+      <ion-img src="../../assets/icon/profile.svg"></ion-img>
+      Profile
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>

@@ -1,0 +1,47 @@
+ion-title {
+    font-size: 30px;
+    font-family: sf_pro_display_bold;
+}
+
+.home{
+    font-size: 13px;
+    font-family: sf_pro_display_regular;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.address{
+    font-family: sf_pro_display_regular;
+    text-transform: none;
+    font-size: 13px;
+}
+
+ion-avatar{
+    width: 46px;
+    height: 46px;
+    margin-right: 3px;
+    margin-top: 10px !important;
+}
+
+.addresses{
+    margin-top: 20px;
+    box-sizing: border-box;
+    box-shadow: 10px 10px 10px 10px #F5F5F7;
+    height: 89px;
+    border-radius: 10px !important;
+}
+
+ion-list{
+    --border-radius:10px;
+}
+
+.addadress{
+    width: 185px;
+    height: 45px;
+    text-transform: none;
+    font-size: 14.5px;
+    font-family: sf_pro_display_regular;
+    margin-top: 20px;
+    --border-radius: 10px;
+}
+

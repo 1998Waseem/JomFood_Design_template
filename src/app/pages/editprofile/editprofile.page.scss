@@ -1,0 +1,99 @@
+ion-title {
+    font-size: 30px;
+    font-family: sf_pro_display_bold;
+}
+
+.profileimg{
+    margin: auto;
+    width: 120px;
+    height: 120px;
+}
+.editicon{
+    margin: auto;
+    position: relative;
+    bottom: 50px;
+    left: 32px;
+    font-size: 28px;
+}
+
+ion-grid.inputgrid{
+    margin-top: -10px;
+}
+.inputfield{
+    background: #F0F5FA;
+    font-size: 14px;
+    font-family: sf_pro_display_regular;
+    color: var(--ion-color-success);
+    border-radius: 10px;
+    border: 1px solid #F0F5FA;
+    width: 100%;
+    padding: 20px;
+    margin-top: -1px;
+    --padding-start: 20px;
+    height: 48px;
+    --placeholder-color: #6B6E82;
+}
+.textarea{
+    background:#F0F5FA;
+    border:1px solid #F0F5FA;
+    font-size: 14px;
+    font-family: sf_pro_display_regular;
+    color:var(--ion-color-success);
+    border-radius:10px;
+    height: 103px;
+    width:100%;
+    margin-top: -5px;
+    --placeholder-color: #6B6E82;
+    --padding-start: 20px;
+}
+
+.input_label{
+    font-size: 14px;
+    font-family: sf_pro_display_bold;
+    color: var(--ion-color-success);
+    margin-bottom: 11px;
+}
+
+.cancelbtn{
+    width: 111px;
+    --border-radius:10px;
+    font-size: 14.5px;
+    font-family: sf_pro_display_regular;
+    height: 44px;
+    text-transform: none;
+    margin-top: 20px;
+    --border-radius: 10px;
+}
+
+.block {
+    width: 100%;
+    height: 298px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+ion-modal {
+    --height: auto;
+    --border-radius: 30px 30px 0px 0px;
+    --text-align: center;
+}
+
+.camera{
+    width: 108px;
+    height: 120px;
+    background: #FAFAFA;
+    text-align: center;
+    border-radius: 20%;
+}
+
+.cam_img{
+    width: 65%;
+    margin: 1px auto 5px;
+}
+
+.camera:hover{
+   background-color: #FC7A1E;
+   color:#ffffff !important;
+}

@@ -1,0 +1,113 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar class="ion-text-center">
+    <!-- <ion-title color="success">paymentsucess</ion-title> -->
+    <ion-buttons slot="start">
+      <ion-back-button default-href="#" color="success" icon="../../../assets/icon/arrow-left.svg"></ion-back-button>
+    </ion-buttons>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" class="logo animate__animated animate__slideInRight">
+        <ion-img src="../../../assets/images/logo.svg" class="ion-text-center"/>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12" class="paymentsucess animate__animated animate__slideInLeft">
+        <ion-img src="../../../assets/images/paymentsucess.svg" class="ion-text-center"/>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12" class="heading ion-text-center animate__animated animate__zoomIn">
+         <ion-label color="success">Your Payment <br/> was Successful!</ion-label>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  
+  <div class="card animate__animated animate__fadeInUpBig">
+
+  <ion-grid class="ion-padding">
+    <ion-row>
+      <ion-col size="8" class="ion-text-left">
+        <ion-label  color="success" class="productitems">Chicken Samosa</ion-label>
+      </ion-col>
+      <ion-col size="4" class="ion-text-right">
+        <ion-label  color="success" class="price">$12.00</ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row style="border-bottom: 1px solid #E7E7E7;">
+      <ion-col size="8" class="ion-text-left">
+        <ion-label color="success" class="productitems">Samosa</ion-label>
+      </ion-col>
+      <ion-col size="4" class="ion-text-right">
+        <ion-label  color="success" class="price">$12.00</ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="8" class="ion-text-left">
+        <ion-label  class="total">Subtotal</ion-label>
+      </ion-col>
+      <ion-col size="4" class="ion-text-right">
+        <ion-label  color="success" class="price">$60</ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row class="orderdetails">
+      <ion-col size="8" class="ion-text-left">
+        <ion-label  class="total" style="position: relative;top: -5px;">Discount </ion-label>&nbsp;
+        <ion-badge><span>0%</span></ion-badge>
+        
+      </ion-col>
+      <ion-col size="4" class="ion-text-right">
+        <ion-label  color="success" class="price">$0</ion-label>
+      </ion-col>
+    </ion-row>
+
+    <ion-row  class="orderdetails">
+      <ion-col size="8" class="ion-text-left">
+        <ion-label  class="total">Delivery Charges</ion-label>
+        
+      </ion-col>
+      <ion-col size="4" class="ion-text-right">
+        <ion-label  color="success" class="price">$3</ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row  class="orderdetails">
+      <ion-col size="4" class="ion-text-left">
+        <ion-label  class="total">Order ID</ion-label>
+        
+      </ion-col>
+      <ion-col size="8" class="ion-text-right">
+        <ion-label  color="success" class="price">ID #321561348</ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row class="orderdetails" style="border-bottom: 1px solid #E7E7E7;">
+      <ion-col size="4" class="ion-text-left">
+        <ion-label  class="total">Date</ion-label>
+        
+      </ion-col>
+      <ion-col size="8" class="ion-text-right">
+        <ion-label  color="success" class="price">11 Nov 2023</ion-label>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" class="ion-text-center">
+          <ion-button color="danger" class="grandbtn">GRAND TOTAL&nbsp;&nbsp;&nbsp;$63/-</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</div>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" class="ion-text-center animate__animated animate__zoomIn">
+          <ion-button color="primary" class="continue">Continue</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

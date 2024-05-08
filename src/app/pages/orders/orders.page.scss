@@ -1,0 +1,58 @@
+ion-toolbar ion-title{
+    font-size:30px;
+    font-family: sf_pro_display_bold;
+}
+.name{
+    display: flex;
+    align-items: center;
+}
+.name img{
+    margin-right: 15px;
+}
+.personcol{
+    margin-left: -5px !important;
+}
+.name, .price{
+    margin-left: 20px;
+    font-size:14px;
+    font-family: sf_pro_display_bold;
+    color: var(--ion-color-success);
+}
+
+
+  .order_id_head{
+     font-size: 14px;
+     font-family: sf_pro_display_regular;
+  }
+  .order_id{
+    font-size: 14px;
+    font-family: sf_pro_display_regular;
+    color: var(--ion-color-success);
+ }
+
+  .date{
+    font-size: 14px;
+     font-family: sf_pro_display_regular;
+  }
+  .order_info_col{
+    margin-top: -17px;
+  }
+  .pickedup{
+    font-size: 14px;
+     font-family: sf_pro_display_regular;
+  }
+  .order_item, .order_item{
+    font-size: 13.2px;
+     font-family: sf_pro_display_regular;
+  }
+
+  ion-grid{
+    border-bottom:1px solid #D3D1D8;
+  }
+
+  .personname, .orderprice{
+    font-size: 14px;
+    font-family: sf_pro_display_bold;
+  }
+
+  

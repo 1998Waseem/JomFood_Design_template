@@ -1,0 +1,154 @@
+<ion-toolbar>
+  <ion-buttons class="button-container" (click)="gotomyaddress()">
+    <ion-back-button default-href="#" color="dark" icon="../../../assets/icon/arrow-left.svg"></ion-back-button>
+  </ion-buttons>
+  <div class="map animate__animated animate__fadeInDown">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d26595.27034426489!2d73.1305233!3d33.568733849999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1710743740204!5m2!1sen!2s" width="600" height="294" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</ion-toolbar>
+
+<ion-content [fullscreen]="true" >
+  
+
+  <!-- <ion-grid >
+    <ion-row>
+      <ion-col size="12">
+    <ion-list lines="none">
+      <ion-item class="custom-item">
+        <ion-label position="stacked" class="input-label">Address</ion-label>
+        <ion-input placeholder="05-07, Kenwingston Square Garden">
+          <ion-icon slot="start" name="location-sharp" style="color:#6B6E82"></ion-icon>
+        </ion-input>
+      </ion-item>
+    </ion-list>
+      </ion-col>
+      
+    </ion-row>
+    <ion-row class="input-row">
+     
+      <ion-col size="6">
+        <ion-list lines="none">
+          <ion-item class="custom-item">
+            <ion-label position="stacked" class="input-label">Street</ion-label>
+            <ion-input placeholder="Ken">
+            </ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+      <ion-col size="6">
+        <ion-list lines="none">
+          <ion-item class="custom-item">
+            <ion-label position="stacked" class="input-label">Post code</ion-label>
+            <ion-input type="number" placeholder="34567">
+            </ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+      
+      
+    </ion-row>
+    <ion-row class="input-row">
+      
+      <ion-col size="12">
+    <ion-list lines="none">
+      <ion-item class="custom-item">
+        <ion-label position="stacked" class="input-label">Appartment</ion-label>
+        <ion-input placeholder="345">
+        </ion-input>
+      </ion-item>
+    </ion-list>
+      </ion-col>
+     
+    </ion-row>
+
+    <ion-row class="input-row">
+      
+      <ion-col size="12">
+       <ion-list lines="none">
+        <ion-item>
+          <ion-label position="stacked" class="input-label">Label as</ion-label><br>
+       
+        </ion-item>
+        <ion-item lines="none" class="buttons_item">
+          <ion-button class="tabs">Home</ion-button>
+       <ion-button class="unselected tabs">Work</ion-button>
+       <ion-button class="unselected tabs">Other</ion-button>
+        </ion-item>
+       </ion-list>
+
+
+      </ion-col>
+     
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="6" class="ion-text-right">
+        <ion-button color="danger" class="cancelbtn"><ion-icon style="font-size: 20px;" src="../../../assets/icon/close-circle.svg"></ion-icon>&nbsp;Cancel</ion-button>
+      </ion-col>
+      <ion-col size="6" class="ion-text-left">
+        <ion-button color="primary" class="cancelbtn"><ion-icon style="font-size: 20px;" src="../../../assets/icon/tick-circle.svg"></ion-icon>&nbsp;Update</ion-button>
+      </ion-col>
+    </ion-row>
+    
+  </ion-grid> -->
+
+
+  <ion-grid class="ion-padding">
+    <ion-row>
+     <ion-col size="12" class="animate__animated animate__slideInLeft">
+       <p color="success" class="input-label">Address</p>
+      <ion-input type="text" placeholder="05-07, Kenwingston Square Garden">
+        <ion-icon slot="start" src="../../../assets/icon/marker.svg" />
+      </ion-input>
+     </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="6" class="animate__animated animate__slideInLeft">
+        <p color="success" class="input-label">Street</p>
+       <ion-input type="text" placeholder="ken">
+        <ion-icon slot="start" src="../../../assets/icon/marker.svg" style="opacity: 0;  margin-left: -20px;"/>
+       </ion-input>
+      </ion-col>
+      <ion-col size="6" class="animate__animated animate__slideInRight">
+        <p color="success" class="input-label">Post code</p>
+       <ion-input type="number" placeholder="34567">
+        <ion-icon slot="start" src="../../../assets/icon/marker.svg" style="opacity: 0; margin-left: -20px;"/>
+       </ion-input>
+      </ion-col>
+     </ion-row>
+
+     <ion-row>
+      <ion-col size="12" class="animate__animated animate__slideInLeft">
+        <p color="success" class="input-label">Appartment</p>
+       <ion-input type="text" placeholder="345">
+        <ion-icon slot="start" src="../../../assets/icon/marker.svg" style="opacity: 0; margin-left: -20px;"/>
+       </ion-input>
+      </ion-col>
+     </ion-row>
+
+    <ion-row>
+      <ion-col size="12">
+        <p class="input-label">Label as</p><br>
+        <ion-list lines="none" style="    position: relative;
+        left: -16px;top:-30px">
+          <ion-item lines="none">
+            <button class="unselectedbtn">Home</button>
+            <button class="unselectedbtn">Work</button>
+            <button class="unselectedbtn">Other</button>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+
+    <ion-row style="margin-top: -30px;">
+      <ion-col size="6" class="ion-text-right">
+        <ion-button color="danger" class="cancelbtn animate__animated animate__slideInLeft"><ion-icon style="font-size: 20px;" src="../../../assets/icon/close-circle.svg"></ion-icon>&nbsp;Cancel</ion-button>
+      </ion-col>
+      <ion-col size="6" class="ion-text-left">
+        <ion-button color="primary" class="cancelbtn animate__animated animate__slideInRight"><ion-icon style="font-size: 20px;" src="../../../assets/icon/tick-circle.svg"></ion-icon>&nbsp;Update</ion-button>
+      </ion-col>
+    </ion-row>
+    
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,33 @@
+ion-title{
+    font-size: 30px;
+    font-family: sf_pro_display_bold;
+}
+
+.logo ion-img{
+    width: 191px;
+    height: 43px;
+    margin: 5px auto;
+}
+
+ul{
+    margin-left: -10px;
+    margin-top: -10px;
+}
+
+.heading{
+    font-size: 14px;
+    font-family: sf_pro_display_bold;
+    margin-top: -10px;
+    color: var(--ion-color-success);
+    
+}
+.regular_content{
+    font-size: 14px;
+    font-family: sf_pro_display_regular;
+    line-height: 19px;
+    color: var(--ion-color-success);
+}
+
+.regularitem{
+    margin-top: -12px;
+}

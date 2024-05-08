@@ -1,0 +1,76 @@
+<ion-content>
+
+    <div class="welcomescreen" mode="md">
+      <ion-grid class="ion-padding">
+        <ion-row>
+          <ion-col size="12" style="text-align: right;">
+            <!-- <ion-button class="skipbtn" size="small" color="light" shape="round" style="color:orange !important">Skip</ion-button> -->
+            <button class="skipbtn" (click)="gotohomescreen()">Skip</button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+  
+      <ion-grid class="ion-padding">
+        <ion-row style="margin-top: 50px;">
+          <ion-col size="12">
+            <ion-label color="light" class="mainhead1">Welcome to</ion-label>
+            <ion-label color="secondary" class="mainhead2">Dilana Tandoor</ion-label>
+            <p class="mainheaddesc" >Your favourite foods delivered fast <br> at your door.</p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      
+  
+    
+      <div class="buttons" style="margin-bottom: 25px;">
+  
+      <ion-grid>
+        <ion-row>
+          <ion-col size="1"></ion-col>
+          <ion-col size="10">
+            <ion-row class="ion-align-items-end">
+              <ion-col size="12">
+                <p class="signin">sign in with</p>
+              </ion-col>
+           
+            </ion-row>
+            <ion-row style="margin-top:-15px;">
+              <ion-col size="6">
+                <ion-button color="light"  size="small"  class="social_btn">
+                  <!-- <img slot="start" src="../../assets/icon/whatsapp.png" style="width: 25%;" />&nbsp;&nbsp; -->
+                  <ion-icon slot="start" src="../../assets/icon/whatsapp.svg" />
+                  Whatsapp
+                </ion-button>
+              </ion-col>
+              <!-- <ion-col size="2"></ion-col> -->
+              <ion-col size="6">
+                <ion-button color="light"  size="small" class="social_btn">
+                  <!-- <img slot="start" src="../../assets/icon/google.png" style="width: 25%;" />&nbsp;&nbsp; -->
+                  <ion-icon slot="start" src="../../assets/icon/google.svg"></ion-icon>
+                  Google
+                </ion-button>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="12">
+                <button class="lastbtn" (click)="gotosignup()">
+                  Start with email or phone
+                </button>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="12" style="text-align: center;">
+                <ion-label color="light" class="bottom_text">Already have an account?</ion-label>&nbsp;
+                <ion-label color="light" class="questionmark" (click)="gotosignin()">Sign In</ion-label>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+          <ion-col size="1"></ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  
+    </div>
+  
+  </ion-content>

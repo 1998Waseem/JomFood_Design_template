@@ -1,0 +1,557 @@
+ion-title {
+    font-size: 30px;
+    font-family: sf_pro_display_bold;
+}
+
+.cartcontent{
+    margin-top: -20px !important;
+}
+
+.delivery-detail-heading {
+    font-size: 16px;
+    color: var(--ion-color-success);
+    font-family: sf_pro_display_bold;
+}
+
+.delivery_btn {
+     text-transform: none;
+    font-size: 11.5px;
+    font-family: sf_pro_display_medium;
+    height: 28px;
+    width: 80px;
+
+}
+
+ion-segment-button{
+    font-size: 16px;
+    font-family: sf_pro_display_semibold;
+}
+
+.addressbtn{
+    color: var(--ion-color-success);
+    font-size: 12px;
+    /* width: 85px; */
+    font-family: sf_pro_display_regular;
+    width: 80px;
+    --background: linear-gradient(#FAFAFA,#EEEE);
+}
+
+.address_placeholder {
+    font-size: 12.5px;
+    font-family: 'sf_pro_display_medium';
+    --placeholder-color: #445470 !important;
+}
+
+.counter-row {
+    display: flex;
+    align-items: center;
+  }
+
+  .minusicon,
+  .counter,
+  .addicon {
+    margin: 5px auto; /* Adjust the margin as needed */
+    cursor: pointer;
+  }
+// .address_placeholder{
+//     --placeholder-color:#43536E;
+//     font-size: 14px !important;
+//     font-family: sf_pro_display_medium !important;
+    
+// }
+.location-icon{
+    font-size: 25px;
+}
+.wallet_icon{
+    margin-right: 8px !important;
+    font-size: 27px;
+    margin-top: -6px;
+}
+.tip {
+    font-size: 16px;
+    font-family: sf_pro_display_bold;
+    color: var(--ion-color-success);
+    margin-top: 2px;
+}
+
+.tipdesc {
+    font-size: 14px;
+    color: #A3A6AD;
+    font-family: sf_pro_display_regular;
+    margin-top: -7px;
+
+}
+ion-badge span{
+    position: relative;
+    top: 1px;
+    left: 1px;
+    bottom: 0px;
+}
+.notnow{
+    font-size: 18px;
+    font-family: sf_pro_display_bold;
+    text-transform: none;
+    text-transform: none;
+}
+
+.tipvalue, .notnow {
+    border: 1px solid #8C9099;
+    color: #8C9099;
+    margin-right: 22px;
+    border-radius: 10px;
+    --background-focused: transparent;
+    --border-width-focused: 0;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.tipvaluemodal{
+    border: 1px solid #8C9099;
+    color: #8C9099;
+    border-radius: 10px;
+    --background-focused: transparent;
+    --border-width-focused: 0;
+    font-size: 16px;
+    width: 104px;
+    height: 57px;
+    margin-right: 7px;
+    text-transform: none;
+    font-family: sf_pro_display_semibold;
+}
+
+.timemodal{
+    border: 1px solid #8C9099 !important;
+    color: #8C9099 !important;
+    border-radius: 10px !important;
+    --background-focused: transparent !important;
+    --border-width-focused: 0 !important;
+    font-size: 16px !important;
+    width: 175px !important;
+    height: 37px !important; 
+    margin-right: 7px !important;
+    text-transform: none !important;
+    font-family: sf_pro_display_semibold !important;
+}
+
+.bal
+{
+    font-size: 14.5px;
+    font-family: sf_pro_display_regular;
+    margin-top: -16px;
+}
+
+.notnow:hover{
+    --border-bottom: none !important;
+}
+.tipvalue:hover {
+    --border-bottom: none !important;
+}
+
+.tipvaluemodal:hover {
+    --border-bottom: none !important;
+}
+
+// .counter {
+//     margin-top: 25px;
+// }
+
+.counter{
+    margin-top: 3px;
+    font-size: 14px;
+    font-family: sf_pro_display_regular;
+    color: #172A4D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: -4px;
+    }
+
+.countitem{
+    font-size: 14px;
+    font-family: sf_pro_display_regular;
+    margin-top: 3px;
+}
+
+.itemname{
+    font-size: 16px;
+    font-family: sf_pro_display_regular;
+    color: var(--ion-color-success);
+}
+.itemprice{
+    font-size: 18px;
+    font-family: sf_pro_display_medium;
+    color: var(--ion-color-success);
+    margin-top: 0px;
+}
+.countercol{
+    margin-top: -8px;
+  }
+  .minusicon{
+    
+    border-radius: 40px;
+    border: 1px solid #FC7A1E;
+  }
+  
+  .counter{
+    margin-top: 0px;
+    font-size: 14px;
+    font-family: sf_pro_display_regular;
+  }
+
+ion-item-sliding.md.hydrated {
+    border-radius: 10px;
+    height: 75px;
+}
+
+.checkbox {
+    margin-top: 20px;
+}
+
+.checkbox ion-checkbox{
+    color:#445470;
+    font-size: 16px;
+    font-family: sf_pro_display_regular;
+
+}
+
+ion-item-sliding {
+    box-sizing: border-box;
+    box-shadow: 10px 10px 10px 10px #F5F5F7;
+}
+.tipvalue:hover{
+    --border-bottom:none !important;
+}
+.notnow:hover{
+    --border-bottom:none !important;
+}
+.tipvalue,.notnow {
+    --indicator-color: transparent !important;
+    --indicator-color-checked: transparent !important;
+    width: 95px;
+    min-height: 35px !important;
+    border: 1px solid #8C9099;
+    color: #8C9099;
+    font-size: 17px;
+    font-family: sf_pro_display_semibold;
+  }
+
+  .tipvalue:hover{
+    color:var(--ion-color-primary);
+    border:1px solid var(--ion-color-primary);
+  }
+  .tipvaluemodal:hover{
+    color:var(--ion-color-primary);
+    border:1px solid var(--ion-color-primary);
+  }
+  .notnow:hover{
+    color:var(--ion-color-primary);
+    border:1px solid var(--ion-color-primary);
+  }
+  .timemodal:hover{
+    color:var(--ion-color-primary) !important;
+    border:1px solid var(--ion-color-primary) !important;
+  }
+ion-item-option {
+    background-color: #FDE7D9;
+}
+
+ion-avatar {
+    --border-radius: 4px;
+    width: 62px;
+    height: 62px;
+    position: relative;
+    top: -10px;
+    right: 8px;
+    margin-right: -2px;
+}
+
+.sliding-item {
+    margin-top: 10px;
+}
+.item-info{
+    position: relative;
+    top: -7px;
+}
+
+.yourorderheading
+ {
+    font-size: 16.5px;
+    font-family: sf_pro_display_bold;
+    color: var(--ion-color-success);
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.promoheading{
+    font-size: 16.5px;
+    font-family: sf_pro_display_bold;
+    color: var(--ion-color-success);
+    margin-bottom: 15px;
+}
+
+.promo-class {
+    background: #FCFCFD;
+    border: 2px solid #E7E7E7;
+    border-radius: 10px;
+}
+
+.promo_code{
+    font-size: 13px;
+    --placeholder-color: #9AA0B4;
+    font-family: sf_pro_display_regular;
+}
+
+.applybtn{
+    height: 38px;
+    text-transform: none;
+    font-size: 16px;
+    left: 0px;
+    margin-right: 0px;
+    --padding-start: 14px;
+    --padding-end: 14px;
+    font-family: sf_pro_display_regular;
+    position: relative;
+   
+}
+
+.promofield,
+.promitem {
+    background: #FCFCFD !important;
+}
+
+.balanceitem {
+    background-color: #ffffff;
+}
+
+.balance-class {
+    background: #ffffff;
+    box-shadow: 1px 1px 24px #F3F3F3;
+    border-radius: 10px;
+    height: 39px;
+}
+
+ion-modal {
+    --height: auto;
+    --border-radius: 30px 30px 0px 0px;
+    --text-align: center;
+}
+
+
+
+.tickavatar {
+    margin: auto;
+    width: 65px;
+    height: 65px;  
+}
+
+.ticklabel {
+    font-size: 16px;
+    font-family: sf_pro_display_medium;
+    margin-top: 0px;
+    color: var(--ion-color-success);
+}
+
+.ticklabel1{
+    font-size: 16px;
+    font-family: sf_pro_display_medium;
+    margin-top: 30px;
+    color: var(--ion-color-success);
+}
+
+.closebtn, .checkmarkbtn
+{
+    height: 45px;
+    text-transform: none;
+    --border-radius:10px;
+    font-size: 14px;
+}
+
+.closebtn ion-icon
+{
+    font-size: 25px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.checkmarkbtn ion-icon
+{
+    font-size: 25px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.card{
+    width: 120px;
+    height: 131px;
+    background-color: #ffff;
+    padding: 10px;
+    background-image: linear-gradient(1deg, #F7F7F7, #ffff);
+    border-radius: 15px
+}
+
+.block {
+    width: 100%;
+    height: 270px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.block1 {
+    width: 100%;
+    height: auto;
+    // display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.block3 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+ion-modal {
+    --height: auto;
+    --border-radius: 30px 30px 0px 0px;
+    --text-align: center;
+}
+
+.camera{
+    width: 108px;
+    height: 108px;
+    background: #FAFAFA;
+    text-align: center;
+    border-radius: 20%;
+    margin-top: 40px;
+}
+
+.ordertype{
+    font-size: 14px;
+    margin-top: 3px;
+    font-family: sf_pro_display_medium;
+    color:var(--ion-color-success)
+              
+}
+
+.ordertype:hover{
+    color:#ffffff !important;
+}
+
+.cam_img{
+    width: 65%;
+    margin: -21px auto 4px;
+}
+
+.camera ion-label{
+    margin-bottom: 20px;
+}
+
+.camera:hover{
+   background-color: #FC7A1E;
+   --color:#ffffff !important;
+}
+
+.Branchname{
+    font-size: 14px;
+    font-family: sf_pro_display_bold;
+    color: var(--ion-color-success);
+}
+
+.paymnetdesc{
+    font-family: sf_pro_display_regular;
+    font-size: 14px;
+    color: var(--ion-color-success);
+    margin-top: -10px;
+}
+
+.continue{
+    width: 100%;
+    height: 54px;
+    margin-top: 30px;
+    --border-radius:10px;
+    text-transform: none;
+    font-family: sf_pro_display_bold;
+    font-size: 17px;
+}
+
+.continue2{
+    width: 240px;
+    height: 54px;
+    margin-top: 30px;
+    --border-radius:10px;
+    text-transform: none;
+    font-family: sf_pro_display_bold;
+    font-size: 17px;
+    margin: 40px auto 0px;
+}
+
+.countercol{
+    margin-top: -8px;
+  }
+
+  .counter{
+    margin-top: 3px;
+    font-size: 14px;
+    font-family: sf_pro_display_regular;
+    color: #172A4D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: -4px;
+    }
+
+  .minusicon,
+  .counter,
+  .addicon {
+    margin: 5px auto; /* Adjust the margin as needed */
+    cursor: pointer;
+  }
+
+  .itemlisting{
+    margin-top: -15px;
+}
+.Subtotal{
+    color: #B9BFC9;
+    font-family: sf_pro_display_bold;
+    font-size: 13px;
+}
+.Subtotalwithbadge{
+    color: #B9BFC9;
+    font-family: sf_pro_display_bold;
+    font-size: 13px;
+    position: relative;
+    top: -2px;
+}
+.subtotalvalue{
+    font-size: 12.5px;
+    font-family: sf_pro_display_medium;
+}
+.borderbottom{
+    border-bottom: 1px solid #DCDEE0; 
+        
+}
+.grandtotal{
+    font-size: 14.5px;
+    font-family: sf_pro_display_bold;
+}
+.placeorderbtn{
+    height: 58px;
+
+}
+
+.orderbtn{
+    --background: var(--ion-color-primary);
+    --color:var(--ion-color-light);
+    border-radius:40px;
+}
+
+.notnow, .tipvalue, .tipvaluemodal, .timemodal {
+    --indicator-color: transparent !important;
+    --indicator-color-checked: transparent !important;
+  }

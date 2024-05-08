@@ -1,0 +1,30 @@
+
+<ion-toolbar>
+    <ion-buttons slot="start" (click)="gotohome()">
+      <ion-back-button default-href="" color="dark" icon="../../../assets/icon/arrow-left.svg"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" style="text-align: center;">
+        <ion-img src="../../../assets/images/Illustration.svg" class="animate__animated animate__zoomIn" />
+        <ion-label color="success" class="Congrats animate__animated animate__slideInLeft">Congrats!</ion-label>
+        <ion-label  color="success" class="orderplace animate__animated animate__slideInRight">Your Order has been <br> Placed.</ion-label>
+      </ion-col>
+    </ion-row>
+
+    <ion-row style="margin-top: 20px;">
+      <ion-col size="6" style="text-align: right;" class="animate__animated animate__slideInUp">
+        <ion-button color="primary" (click)="gotohome()">Back to Home</ion-button>
+      </ion-col>
+      <ion-col size="6" style="text-align: left;" class="animate__animated animate__slideInUp">
+        <ion-button color="danger" (click)="gotoorderdetails()">Order Details</ion-button>
+
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+</ion-content>

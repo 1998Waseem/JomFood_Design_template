@@ -1,0 +1,79 @@
+ion-header{
+    box-shadow: none;
+}
+ion-title {
+    font-size: 30px;
+    font-family: sf_pro_display_bold;
+}
+// .nameandmessages{
+//     line-height: 10px;
+// }
+.timecol{
+    line-height: 10px;
+}
+
+ion-icon{
+    font-size: 50px;
+}
+
+.name{
+    font-size: 14px;
+    font-family: sf_pro_display_regular;
+    color: var(--ion-color-success);
+    overflow: hidden;
+   display: -webkit-box;
+   -webkit-line-clamp: 1; /* number of lines to show */
+           line-clamp: 1; 
+   -webkit-box-orient: vertical;
+}
+
+.message{
+    font-size: 12px;
+    font-family: sf_pro_display_regular;
+    color: var(--ion-color-success);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* number of lines to show */
+            line-clamp: 1; 
+    -webkit-box-orient: vertical;
+    margin-top: -10px;
+}
+
+.messageseen{
+    color: var(--ion-color-tertiary);
+    font-size: 12px;
+    font-family: sf_pro_display_regular;
+    overflow: hidden;
+   display: -webkit-box;
+   -webkit-line-clamp: 1; /* number of lines to show */
+           line-clamp: 1; 
+   -webkit-box-orient: vertical;
+   margin-top: -10px;
+}
+
+.time{
+    font-size: 8px;
+    font-family: sf_pro_display_regular;
+    color: var(--ion-color-success);
+}
+
+ion-badge{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+ion-badge span{
+    position: relative;
+    top: 0px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    font-size: 11px;
+
+}
+
+.profileimg{
+    margin-right: 13px;
+    width: 38px;
+    height: 38px;
+}

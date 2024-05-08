@@ -1,0 +1,122 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+@import 'animate.css';
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+@font-face {
+    font-family: sf_pro_display_regular;
+    src: url(assets/fonts/sfprodisplayregular.OTF);
+  }
+
+  @font-face {
+    font-family: sf_pro_display_medium;
+    src: url(assets/fonts/sfprodisplaymedium.OTF);
+  }
+
+  @font-face {
+    font-family: sf_pro_display_bold;
+    src: url(assets/fonts/sfprodisplaybold.OTF);
+  }
+
+  @font-face {
+    font-family: sf_pro_display_semibold;
+    src: url(assets/fonts/sfprodisplaysemibold.ttf);
+  }
+
+  // ion-app{
+  //   width: 70%;
+  //   margin: 0px auto;
+  // }
+  ion-title{
+    font-size: 23px !important;
+    color: var(--ion-color-success);
+    font-family: sf_pro_display_bold !important;
+    margin-right: 10px;
+  }
+  ion-header{
+    box-shadow: none !important;
+  }
+
+  button.modal-handle{
+    display: none !important;
+    opacity: 0 !important;
+  }
+
+//   .modal-handle {
+//     left: 0px;
+//     right: 0px;
+//     top: 5px;
+//     border-radius: 8px;
+//     margin-inline: auto;
+//     position: absolute;
+//     width: 36px;
+//     height: 5px;
+//     transform: translateZ(0px);
+//     border: 0px;
+//     background: var(--ion-color-step-350, #c0c0be);
+//     cursor: pointer;
+//     z-index: 11;
+//     opacity: 0;
+//     display: none;
+// }
+
+
+input.searchbar-input.sc-ion-searchbar-md {
+  border-radius: 10px;
+  --background: #FCFCFD;
+  --box-shadow: none;
+  border: 1px solid #E7E7E7;
+  font-size: 12px;
+  font-family: sf_pro_display_regular;
+  --color: #999FB3;
+}
+ 
+.item-native{
+  background: transparent;
+}
+
+.logoimg{
+  width: 191px !important;
+  height: 43px !important;
+  margin: 0px auto !important;
+}
+
+.footericons ion-img{
+  width: 22px;
+  height: 22px;
+  margin-bottom: 4px;
+}
+
+.menuname{
+color: #C6C4CB;
+font-family: sf_pro_display_medium;
+
+}
+
+html, body {
+  zoom: 1; /* Reset zoom level */
+  -webkit-text-size-adjust: 100%; /* Prevent font size adjustment */
+}

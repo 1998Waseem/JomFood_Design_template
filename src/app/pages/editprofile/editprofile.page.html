@@ -1,0 +1,106 @@
+<ion-toolbar class="ion-text-center">
+  <ion-buttons slot="start">
+    <ion-back-button default-href="/profile" color="success" icon="../../../assets/icon/arrow-left.svg"></ion-back-button>
+  </ion-buttons>
+  <ion-title color="success">Edit Profile</ion-title>
+  <ion-buttons slot="end">
+   
+    <ion-icon src="../../../assets/icon/arrow-left.svg" style="opacity: 0;"/>
+ 
+</ion-buttons>
+</ion-toolbar>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" class="ion-text-center animate__animated animate__zoomIn">
+        <ion-avatar class="profileimg">
+        <ion-img src="../../../assets/images/editprofile.svg"></ion-img>
+       
+      </ion-avatar>
+      <ion-icon src="../../../assets/icon/editicon.svg" class="editicon" (click)="openGallery()"></ion-icon>
+       
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid style="margin-top: -60px;" class="animate__animated animate__slideInLeft">
+    <ion-row>
+      <ion-col size="12">
+        <p class="input_label">Full Name</p>
+        <ion-input  type="text" placeholder="Farion Wick" class="inputfield" />
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid class="inputgrid animate__animated animate__slideInLeft">
+    <ion-row>
+      <ion-col size="12">
+        <p class="input_label">Email</p>
+        <ion-input  type="email" placeholder="farionwick@gmail.com" class="inputfield" />
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid class="inputgrid animate__animated animate__slideInLeft">
+    <ion-row>
+      <ion-col size="12">
+        <p class="input_label">Phone Number</p>
+        <ion-input  type="tel" placeholder="408-841-0926" class="inputfield" />
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid class="inputgrid animate__animated animate__slideInLeft">
+    <ion-row>
+      <ion-col size="12">
+        <p class="input_label">Bio</p>
+        <ion-textarea placeholder="Description about what type of food you love" class="textarea"></ion-textarea>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6" class="ion-text-right ">
+        <ion-button color="danger" class="cancelbtn animate__animated animate__slideInLeft"><ion-icon style="    font-size: 23px;
+          position: relative;
+          right: 2px;" src="../../../assets/icon/close-circle.svg"></ion-icon>&nbsp;Cancel</ion-button>
+      </ion-col>
+      <ion-col size="6" class="ion-text-left">
+        <ion-button color="primary" class="cancelbtn animate__animated animate__slideInRight"><ion-icon style="    font-size: 23px;
+          position: relative;
+          right: 2px;" src="../../../assets/icon/tick-circle.svg"></ion-icon>&nbsp;Update</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  <!-- <ion-modal trigger="open-options" [initialBreakpoint]="1" [breakpoints]="[0, 1]" class="confirm-modal">
+    <ng-template>
+      <div class="block">
+        <ion-list lines="none">
+          <ion-item lines="none">
+            <div slot="start" class="ion-text-center camera" (click)="takePicture()">
+              
+                <img src="../../../assets/images/camera.svg" class="cam_img"/>
+              <ion-label color="success">Camera</ion-label>
+            
+            </div>
+            <div slot="end" class="ion-text-center camera" (click)="openGallery()">
+              
+              
+              <img src="../../../assets/images/Gallery.svg" class="cam_img"/>
+            <ion-label color="success">Gallery</ion-label>
+          
+          </div>
+          </ion-item>
+        </ion-list>
+      </div>
+    </ng-template>
+  </ion-modal> -->
+
+
+ 
+</ion-content>
