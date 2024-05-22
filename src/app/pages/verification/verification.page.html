@@ -39,30 +39,54 @@
   </ion-row>
 
   <ion-row>
-    <ion-col size="1"></ion-col>
-    <ion-col size="10" class="animate__animated animate__fadeInDownBig">
+    <!-- <ion-col size="1"></ion-col> -->
+    <ion-col size="12" class="animate__animated animate__fadeInDownBig">
       <ion-grid>
         <ion-row class="change_email">
           <ion-col size="12" class="ion-text-center">
              <p color="primary" (click)="gotoemail()">or Change Email</p>
           </ion-col>
         </ion-row>
+        <form [formGroup]="verificationform1">
         <ion-row>
-          <ion-col size="3">
-            <ion-input type="text" class="email" fill="outline" maxlength="1"/>
+          
+          <!-- <ion-col size="2" class="codecol"> -->
+            <!-- <ion-input type="text" class="email" fill="outline" maxlength="1" [(ngModel)]="number1" (ngModelChange)="checkCode()"/> -->
+            <!-- <ion-input type="text" formControlName="codedigit1" class="email" fill="outline" maxlength="1" [(ngModel)]="number1"/> -->
+          <!-- </ion-col> -->
+          <!-- <ion-col size="2" class="codecol">
+            <ion-input type="text" formControlName="codedigit2" class="email" fill="outline" maxlength="1" [(ngModel)]="number2"/>
           </ion-col>
-          <ion-col size="3">
-            <ion-input type="text" class="email" fill="outline" maxlength="1"/>
+          <ion-col size="2" class="codecol">
+            <ion-input type="text" formControlName="codedigit3" class="email" fill="outline" maxlength="1" [(ngModel)]="number3"/>
           </ion-col>
-          <ion-col size="3">
-            <ion-input type="text" class="email" fill="outline" maxlength="1"/>
-          </ion-col>
-          <ion-col size="3">
-            <ion-input type="text" class="email" fill="outline" maxlength="1"/>
+          <ion-col size="2" class="codecol">
+            <ion-input type="text" formControlName="codedigit4" class="email" fill="outline" maxlength="1" [(ngModel)]="number4"/>
 
           </ion-col>
+<ion-col size="2" class="codecol">
+            <ion-input type="text" formControlName="codedigit5" class="email" fill="outline" maxlength="1" [(ngModel)]="number5"/>
+
+          </ion-col>
+<ion-col size="2" class="codecol">
+            <ion-input type="text" formControlName="codedigit6" class="email" fill="outline" maxlength="1" [(ngModel)]="number6"/>
+
+          </ion-col> -->
+
+          <ion-col size="12">
+            <ion-input type="text" placeholder="Enter Code" formControlName="confirmcode1" class="email" fill="outline" maxlength="6"/>
+            <ion-item *ngIf="verificationform1 && !verificationform1.controls['confirmcode1'].valid  && (verificationform1 &&verificationform1.controls['confirmcode1'].dirty || submitAttempt3)" padding-right lines="none">
+              <p class="errorhere" text-wrap>Please enter valid code!</p>
+</ion-item>
+          </ion-col>
         </ion-row>
+      </form>
         
+        
+
+        <div class="signupbutton animate__animated animate__fadeInUpBig">
+          <ion-button color="primary" size="small" (click)="verifycode()">Submit</ion-button>
+        </div>
         <ion-row>
           <ion-col size="12" class="afteropt animate__animated animate__fadeInDownBig">
             <ion-label color="tertiary">I don’t recevie a code! </ion-label>
@@ -71,7 +95,7 @@
         </ion-row>
       </ion-grid>
     </ion-col>
-    <ion-col size="1"></ion-col>
+    <!-- <ion-col size="1"></ion-col> -->
   </ion-row>
 </ion-grid>
 

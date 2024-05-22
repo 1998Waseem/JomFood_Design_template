@@ -19,16 +19,22 @@
     <ion-row >
       <ion-col size="1"></ion-col>
       <ion-col size="10" class="animate__animated animate__fadeInLeftBig">
+        <form [formGroup]="signupform">
         <div class="inputfield" id="namefield">
           <ion-label class="iput-label">Full Name</ion-label>
-          <ion-input type="text" placeholder="Your Full Name" class="email" fill="outline"/>
+          <ion-input type="text" formControlName="fullname" placeholder="Your Full Name" class="email" fill="outline"/>
+          <ion-item  *ngIf="signupform && !signupform.controls['fullname'].valid  && (signupform.controls['fullname'].dirty || submitAttempt1)" lines="none">
+            <p class="errorhere" text-wrap>Please enter valid name!</p>
+          </ion-item>
         </div>
 
         <div class="inputfield" id="emailfield">
           <ion-label class="iput-label">E-mail</ion-label>
-          <ion-input type="email" placeholder="Your email or phone" class="email" fill="outline"/>
+          <ion-input type="email" formControlName="email" placeholder="Your email or phone" class="email" fill="outline"/>
         </div>
-
+        <ion-item lines="none" *ngIf="signupform && !signupform.controls['email'].valid  && (signupform.controls['email'].dirty || submitAttempt1)">
+          <p class="errorhere" text-wrap>Please enter valid Email</p>
+        </ion-item>
         <!-- <div class="inputfield" id="passwordfield">
           <ion-label class="iput-label">Password</ion-label>
           <ion-input type="password" placeholder="Password" class="email" fill="outline" ([ngModel])="userpassword">
@@ -40,15 +46,18 @@
 
         <div class="inputfield" id="passwordfield">
           <ion-label class="iput-label">Phone Number</ion-label>
-          <ion-input type="tel" placeholder="+60  123456789" class="email" fill="outline">
+          <ion-input type="tel" formControlName="phonenumber" placeholder="+60  123456789" class="email" fill="outline">
             <ion-img src="../../../assets/images/klflag.png" style="width: 20px;" slot="start"></ion-img>
          </ion-input>
+         <ion-item lines="none" *ngIf="signupform && !signupform.controls['phonenumber'].valid  && (signupform.controls['phonenumber'].dirty || submitAttempt1)">
+          <p class="errorhere" text-wrap>Please enter valid Mobile Number</p>
+         </ion-item>
         </div>
 
         <div class="signupbutton">
-          <ion-button color="primary" class="signup_btn">Sign up</ion-button>
+          <ion-button color="primary" class="signup_btn" (click)="dotheregister()">Sign up</ion-button>
         </div>
-
+</form>
         <div class="afterbtntext">
           <ion-label color="tertiary">Already have an account?</ion-label><ion-label color="primary"
             (click)="gotologin()">Login</ion-label>

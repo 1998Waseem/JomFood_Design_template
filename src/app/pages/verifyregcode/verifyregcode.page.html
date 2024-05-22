@@ -1,0 +1,95 @@
+<ion-content mode="md">
+  <ion-grid >
+    <ion-row>
+      <ion-col size="1" class="animation">
+         
+      </ion-col>
+      <ion-col size="10"></ion-col>
+      <ion-col size="1" class="animation1 ion-text-right"></ion-col>
+    </ion-row>
+  
+    <ion-row>
+      <ion-col size="2" style="text-align: center;
+      margin-top: -40px;
+      font-size: 25px" (click)="gotoemail()">
+        <ion-icon src="../../../assets/icon/arrow-left.svg" />
+      </ion-col>
+      <ion-col size="8">
+       
+      </ion-col>
+      <ion-col size="2"></ion-col>
+    </ion-row>
+    <ion-row style="margin-top: 40px;">
+     
+      <ion-col size="12" class="ion-text-center signupmainclass">
+        <div class="fogotheading">
+          <ion-label style="display: block;" color="success animate__animated animate__fadeInDownBig" class="resetheading">Verification Code</ion-label>
+          <p  class="resetdesc animate__animated animate__fadeInDownBig" style="margin-top: 20px;">Please type the verification code sent <br> to your-email&#64;gmail.com</p>
+        </div>
+      </ion-col>
+      
+    </ion-row>
+  
+    <ion-row>
+      <!-- <ion-col size="1"></ion-col> -->
+      <ion-col size="12" class="animate__animated animate__fadeInDownBig">
+        <ion-grid>
+          <ion-row class="change_email">
+            <ion-col size="12" class="ion-text-center">
+               <p color="primary" (click)="gotoemail()">or Change Email</p>
+            </ion-col>
+          </ion-row>
+          <form [formGroup]="verificationform">
+          <ion-row>
+            
+            <!-- <ion-col size="2" class="codecol"> -->
+              <!-- <ion-input type="text" class="email" fill="outline" maxlength="1" [(ngModel)]="number1" (ngModelChange)="checkCode()"/> -->
+              <!-- <ion-input type="text" formControlName="codedigit1" class="email" fill="outline" maxlength="1" [(ngModel)]="number1"/> -->
+            <!-- </ion-col> -->
+            <!-- <ion-col size="2" class="codecol">
+              <ion-input type="text" formControlName="codedigit2" class="email" fill="outline" maxlength="1" [(ngModel)]="number2"/>
+            </ion-col>
+            <ion-col size="2" class="codecol">
+              <ion-input type="text" formControlName="codedigit3" class="email" fill="outline" maxlength="1" [(ngModel)]="number3"/>
+            </ion-col>
+            <ion-col size="2" class="codecol">
+              <ion-input type="text" formControlName="codedigit4" class="email" fill="outline" maxlength="1" [(ngModel)]="number4"/>
+  
+            </ion-col>
+  <ion-col size="2" class="codecol">
+              <ion-input type="text" formControlName="codedigit5" class="email" fill="outline" maxlength="1" [(ngModel)]="number5"/>
+  
+            </ion-col>
+  <ion-col size="2" class="codecol">
+              <ion-input type="text" formControlName="codedigit6" class="email" fill="outline" maxlength="1" [(ngModel)]="number6"/>
+  
+            </ion-col> -->
+  
+            <ion-col size="12">
+              <ion-input type="text" placeholder="Enter Code" formControlName="confirmcode" class="email" fill="outline" maxlength="6"/>
+              <ion-item *ngIf="verificationform && !verificationform.controls['confirmcode'].valid  && (verificationform &&verificationform.controls['confirmcode'].dirty || submitAttempt3)" padding-right lines="none">
+                <p class="errorhere" text-wrap>Please enter valid code!</p>
+  </ion-item>
+            </ion-col>
+          </ion-row>
+        </form>
+          
+          
+  
+          <div class="signupbutton animate__animated animate__fadeInUpBig">
+            <ion-button color="primary" size="small" (click)="verifycode()">Submit</ion-button>
+          </div>
+          <ion-row>
+            <ion-col size="12" class="afteropt animate__animated animate__fadeInDownBig">
+              <ion-label color="tertiary">I don’t recevie a code! </ion-label>
+              <ion-label color="primary" (click)="gotoemail()">Please resend</ion-label>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-col>
+      <!-- <ion-col size="1"></ion-col> -->
+    </ion-row>
+  </ion-grid>
+  
+  </ion-content>
+  

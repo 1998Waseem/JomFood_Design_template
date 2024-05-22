@@ -43,31 +43,41 @@
       <ion-col size="1"></ion-col>
       <ion-col size="10" class="animate__animated animate__fadeInRightBig">
       
+        <form [formGroup]="loginform">
         <div class="inputfield" id="emailfield" style="margin-top: 2.61vh !important;">
         <ion-label>E-mail</ion-label>
-        <ion-input type="email" placeholder="Your email or phone" class="email" fill="outline"/>
+        <ion-input type="email" formControlName="loginname" placeholder="Your email or phone" class="email" fill="outline"/>
+        <ion-item *ngIf="loginform && !loginform.controls['loginname'].valid && (loginform.controls['loginname'].dirty || submitAttempt2)" lines="none">
+          <p class="errorhere" text-wrap>Please enter valid email!</p>
+       </ion-item>
       </div>
 
       <div class="inputfield" id="passwordfield">
         <ion-label>Password</ion-label>
-        <ion-input type="password" placeholder="Password" class="email" fill="outline">
-          <ion-button fill="clear" slot="end" aria-label="Show/hide">
+        <ion-input type="password" formControlName="loginpassword" placeholder="Password" class="email" fill="outline">
+          <!-- <ion-button fill="clear" slot="end" aria-label="Show/hide">
             <ion-icon slot="icon-only" src="../../../assets/icon/eye.svg"></ion-icon>
-          </ion-button>
+          </ion-button> -->
+          <ion-input-password-toggle slot="end" color="darkgray"></ion-input-password-toggle>
+
         </ion-input>
+        <ion-item *ngIf="loginform && !loginform.controls['loginpassword'].valid && (loginform.controls['loginpassword'].dirty || submitAttempt2)" lines="none">
+          <p class="errorhere" text-wrap>Please enter valid password!</p>
+       </ion-item>
         </div>
 
         <div class="forgotpassword">
           <ion-label color="primary" (click)="gotoforgot()">Forgot password?</ion-label>
         </div>
         <div class="signupbutton">
-        <ion-button color="primary" id="open-loading" shape="round" size="default" (click)="gotodashboard()" class="login_btn">Login</ion-button>
-        <ion-loading trigger="open-loading" message="Loading..." duration="3000"></ion-loading>
+        <ion-button color="primary" shape="round" size="default" class="login_btn" (click)="dothelogin()">Login</ion-button>
+
       </div>
 
       <div class="afterbtntext">
         <ion-label color="tertiary">Don’t have an account? </ion-label><ion-label color="primary" (click)="gotosignup()">Sign Up</ion-label>
       </div>
+    </form>
       </ion-col>
       <ion-col size="1"></ion-col>
     </ion-row>
@@ -108,7 +118,7 @@
       <ion-row>
         <ion-col size="1"></ion-col>
         <ion-col size="10" class="ion-text-center">
-          <button class="guest_btn" (click)="gotodashboard()">Continue as a Guest</button>
+          <button class="guest_btn" (click)="fetching_products_as_a_guest()">Continue as a Guest</button>
         </ion-col>
         <ion-col size="1"></ion-col>
       </ion-row>

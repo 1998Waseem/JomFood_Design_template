@@ -5,13 +5,13 @@ import { AlertController } from '@ionic/angular';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
 @Component({
-  selector: 'app-verification',
-  templateUrl: './verification.page.html',
-  styleUrls: ['./verification.page.scss'],
+  selector: 'app-verifyregcode',
+  templateUrl: './verifyregcode.page.html',
+  styleUrls: ['./verifyregcode.page.scss'],
 })
-export class VerificationPage implements OnInit {
+export class VerifyregcodePage implements OnInit {
 
-  verificationform1:FormGroup
+  verificationform:FormGroup
 
   number1:string='';
   number2:string='';
@@ -25,16 +25,17 @@ export class VerificationPage implements OnInit {
 
 
   constructor(private router: Router,private http:HttpClient,private alertCtrl:AlertController,private formbuilder:FormBuilder,private authservice:AuthService) { 
-    this.verificationform1 = formbuilder.group({
-       confirmcode1:['',Validators.required],
+    this.verificationform = formbuilder.group({
+       confirmcode:['',Validators.required],
        
     })
   }
 
-  saveVerificationCode1() {
-    const confirmCode1 = this.verificationform1.value.confirmcode1;
-    if (confirmCode1) {
-      localStorage.setItem('Verification_reset_code', confirmCode1);
+  saveVerificationCode() {
+    const confirmCode = this.verificationform.value.confirmcode;
+    console.log("Hello Testing")
+    if (confirmCode) {
+      localStorage.setItem('Verification_code', confirmCode);
     }
   }
    
@@ -42,15 +43,15 @@ export class VerificationPage implements OnInit {
     
   }
   verifycode() {
-    if (!this.verificationform1.valid) {
+    if (!this.verificationform.valid) {
       this.submitAttempt3 = true;
       console.log("error!");
     } else {
       this.submitAttempt3 = false;
       console.log("success!");
-      this.saveVerificationCode1();
-      console.log(this.verificationform1.value);
-      // this.sendverificationcode(this.verificationform.value)
+      this.saveVerificationCode(); 
+      console.log(this.verificationform.value);
+      this.sendverificationcode(this.verificationform.value)
       this.gotopassword()
     }
   }
@@ -64,7 +65,7 @@ sendverificationcode(user:any)
 }
 gotopassword(){
   
-  this.router.navigate(['/resetpassword']);
+  this.router.navigate(['/password']);
 }
 
 // async checkCode() {

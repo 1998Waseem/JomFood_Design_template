@@ -2,8 +2,9 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { ActionSheetController } from '@ionic/angular';
 import { ModalController } from '@ionic/angular';
-
-
+import { HttpClient } from '@angular/common/http';
+import { AuthService } from './services/auth.service';
+import { Observable } from 'rxjs';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -11,12 +12,27 @@ import { ModalController } from '@ionic/angular';
 })
 export class AppComponent {
   public message: string = 'Hello, Ionic with Angular!';
-  
+  public username:any;
+  public useremail:any;
+  public burl:any;
+  public branches:any;
+  selectedBranchId: number | null = null;
+  selectedBranch: any;
+  selected_branch:any
 
-  constructor(private router:Router,private actionSheetController: ActionSheetController,private modalController: ModalController) {
+  constructor(private router:Router,private actionSheetController: ActionSheetController,private modalController: ModalController,private http:HttpClient,private authservice:AuthService) {
     console.log('AppComponent instantiated');
+
+    this.username = window.localStorage.getItem('ufname');
+    this.useremail = window.localStorage.getItem('email');
+    this.burl='https://altitudeprojects.net/js-mp/user_api';
+   
   }
 
+
+  ngOnInit(){
+    this.getbranches();
+  }
   async presentActionSheet() {
     const actionSheet = await this.actionSheetController.create({
       header: 'Select Language',
@@ -98,4 +114,40 @@ export class AppComponent {
   dologout(){
     this.router.navigate(['/login']);
   }
+
+
+  async getbranches(){
+    var url= this.burl + '/seller/get_branches';
+  
+    try{
+      const data:any = await this.http.get(url).toPromise();
+      console.log('Get Branches are:',data);
+  
+      if(data.status == "success"){
+        this.branches = data.data;
+        console.log("Get Branchesn response:", this.branches);
+        localStorage.setItem('seller_id:',this.branches[0].id);
+        localStorage.setItem('seller_name:',this.branches[0].full_name);
+      }else{
+        console.log("Error",data.message);
+      }
+    }catch(error){
+      console.log("Error in get branches:",error);
+    }
+  }
+
+  changeBranch(branch_id:any) {
+		if (branch_id !== localStorage.getItem("seller_id")) {
+			localStorage.setItem("seller_id", branch_id)
+			// localStorage.setItem("seller_name", branch_name)
+			this.selected_branch = branch_id;
+      console.log("Branch is:",this.selected_branch);
+      this.authservice.fetchmostlikedata();
+      console.log("Testing");
+     
+    }
+	}
+
+ 
+  
 }

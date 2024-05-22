@@ -12,7 +12,7 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'productdetails',
+    path: 'productdetails/:productId',
     loadChildren: () => import('./pages/productdetails/productdetails.module').then( m => m.ProductdetailsPageModule)
   },
   {
@@ -38,7 +38,8 @@ const routes: Routes = [
   {
     path: 'registration',
     loadChildren: () => import('./pages/registration/registration.module').then( m => m.RegistrationPageModule)
-  },  {
+  },
+  {
     path: 'cart',
     loadChildren: () => import('./pages/cart/cart.module').then( m => m.CartPageModule)
   },
@@ -133,6 +134,22 @@ const routes: Routes = [
   {
     path: 'test',
     loadChildren: () => import('./pages/test/test.module').then( m => m.TestPageModule)
+  },
+  {
+    path: 'password',
+    loadChildren: () => import('./password/password.module').then( m => m.PasswordPageModule)
+  },
+  {
+    path: 'verifycode',
+    loadChildren: () => import('./pages/verifycode/verifycode.module').then( m => m.VerifycodePageModule)
+  },
+  {
+    path: 'verifyregcode',
+    loadChildren: () => import('./pages/verifyregcode/verifyregcode.module').then( m => m.VerifyregcodePageModule)
+  },
+  {
+    path: 'resetpassword',
+    loadChildren: () => import('./pages/resetpassword/resetpassword.module').then( m => m.ResetpasswordPageModule)
   }
 
 ];

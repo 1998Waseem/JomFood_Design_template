@@ -1,229 +1,219 @@
-<ion-app >
+<ion-app>
   <ion-menu contentId="main-content" menuId="sidemenu" class="animate__animated animate__headShake" mode="md">
-
     <ion-content class="ion-padding">
-      
-
       <ion-grid>
         <ion-row>
           <ion-col size="12" class="ion-text-left">
-            <!-- <ion-avatar class="ion-text-left">
-              <ion-img src="../assets/images/mylogo.png" />
-            </ion-avatar> -->
-            <ion-img src="../assets/images/mylogo.png" style="width: 100px;
-            height: 100px;
-            margin-bottom: 20px;"/>
+            <ion-img src="../assets/images/mylogo.png" style="width: 100px; height: 100px; margin-bottom: 20px;" />
           </ion-col>
           <ion-col size="12">
-
-            <p class="name">Farion Wick</p>
-            <p class="email">farionwick&#64;gmail.com</p>
+            <p class="name">{{username}}</p>
+            <p class="email">{{useremail}}</p>
           </ion-col>
         </ion-row>
       </ion-grid>
 
       <ion-menu-toggle>
-      <ion-list lines="none" (click)="gotohome()">
-        <ion-item>
-          <div class="menuitem">
-            <img src="../assets/icon/home-2.svg" />
-            <p class="menu">Home</p>
-          </div>
-        </ion-item>
-      </ion-list>
-    </ion-menu-toggle>
-
-      <ion-menu-toggle>
-      <ion-list lines="none" (click)="gotocategory()" class="menulist">
-        <ion-item id="menuitem">
-          <div class="menuitem">
-            <img src="../assets/icon/filter-search.svg" />
-            <p class="menu">Categories</p>
-          </div>
-        </ion-item>
-      </ion-list>
-    </ion-menu-toggle>
-
-    <ion-menu-toggle>
-      <ion-list lines="none" id="open-branch-modal" class="menulist">
-        <ion-item id="menuitem">
-          <div class="menuitem">
-            <img src="../assets/icon/task.svg" />
-            <p class="menu">Change Branch</p>
-          </div>
-        </ion-item>
-      </ion-list>
-    </ion-menu-toggle>
-
-      <ion-menu-toggle>
-      <ion-list lines="none" (click)="gotomyorder()" class="menulist">
-        <ion-item id="menuitem">
-          <div class="menuitem">
-            <img src="../assets/icon/order.svg" />
-            <p class="menu">My Orders</p>
-          </div>
-        </ion-item>
-      </ion-list>
-    </ion-menu-toggle>
-
-      <ion-menu-toggle>
-      <ion-list lines="none" (click)="gotomessages()" class="menulist">
-        <ion-item id="menuitem">
-          <div class="menuitem">
-            <img src="../assets/icon/message-text.svg" />
-            <p class="menu">Messages</p>
-          </div>
-        </ion-item>
-      </ion-list>
-
+        <ion-list lines="none" (click)="gotohome()">
+          <ion-item>
+            <div class="menuitem">
+              <img src="../assets/icon/home-2.svg" />
+              <p class="menu">Home</p>
+            </div>
+          </ion-item>
+        </ion-list>
       </ion-menu-toggle>
 
-    <ion-menu-toggle>
-      <ion-list lines="none" (click)="gotocredit()" class="menulist">
-        <ion-item id="menuitem">
-          <div class="menuitem">
-            <img src="../assets/icon/card-tick.svg" />
-            <p class="menu">Credits</p>
-          </div>
-        </ion-item>
-      </ion-list>
-    </ion-menu-toggle>
-
+      <ion-menu-toggle>
+        <ion-list lines="none" (click)="gotocategory()" class="menulist">
+          <ion-item>
+            <div class="menuitem">
+              <img src="../assets/icon/filter-search.svg" />
+              <p class="menu">Categories</p>
+            </div>
+          </ion-item>
+        </ion-list>
+      </ion-menu-toggle>
 
       <ion-menu-toggle>
-      <ion-list lines="none" (click)="gotocart()" class="menulist">
-        <ion-item id="menuitem">
-          <div class="menuitem">
-            <img src="../assets/icon/shopping-cart.svg" />
-            <p class="menu">Cart</p>
-          </div>
-        </ion-item>
-      </ion-list>
-    </ion-menu-toggle>
-
+        <ion-list lines="none" class="menulist">
+          <ion-item id="open-branch-modal">
+            <div class="menuitem">
+              <img src="../assets/icon/task.svg" />
+              <p class="menu">Change Branch</p>
+            </div>
+          </ion-item>
+        </ion-list>
+      </ion-menu-toggle>
 
       <ion-menu-toggle>
-      <ion-list lines="none" (click)="gotoreviews()" class="menulist">
-        <ion-item id="menuitem">
-          <div class="menuitem">
-            <img src="../assets/icon/star.svg" />
-            <p class="menu">Reviews</p>
-          </div>
-        </ion-item>
-      </ion-list>
-    </ion-menu-toggle>
+        <ion-list lines="none" (click)="gotomyorder()" class="menulist">
+          <ion-item>
+            <div class="menuitem">
+              <img src="../assets/icon/order.svg" />
+              <p class="menu">My Orders</p>
+            </div>
+          </ion-item>
+        </ion-list>
+      </ion-menu-toggle>
 
-    
-    <ion-menu-toggle>
-      <ion-list lines="none" id="open-modal" class="menulist">
-        <ion-item>
-          <div class="menuitem">
-            <img src="../assets/icon/text-block.svg" />
-            <p class="menu">Switch Language</p>
-          </div>
-        </ion-item>
-      </ion-list>
-    </ion-menu-toggle>
+      <ion-menu-toggle>
+        <ion-list lines="none" (click)="gotomessages()" class="menulist">
+          <ion-item>
+            <div class="menuitem">
+              <img src="../assets/icon/message-text.svg" />
+              <p class="menu">Messages</p>
+            </div>
+          </ion-item>
+        </ion-list>
+      </ion-menu-toggle>
+
+      <ion-menu-toggle>
+        <ion-list lines="none" (click)="gotocredit()" class="menulist">
+          <ion-item>
+            <div class="menuitem">
+              <img src="../assets/icon/card-tick.svg" />
+              <p class="menu">Credits</p>
+            </div>
+          </ion-item>
+        </ion-list>
+      </ion-menu-toggle>
+
+      <ion-menu-toggle>
+        <ion-list lines="none" (click)="gotocart()" class="menulist">
+          <ion-item>
+            <div class="menuitem">
+              <img src="../assets/icon/shopping-cart.svg" />
+              <p class="menu">Cart</p>
+            </div>
+          </ion-item>
+        </ion-list>
+      </ion-menu-toggle>
+
+      <ion-menu-toggle>
+        <ion-list lines="none" (click)="gotoreviews()" class="menulist">
+          <ion-item>
+            <div class="menuitem">
+              <img src="../assets/icon/star.svg" />
+              <p class="menu">Reviews</p>
+            </div>
+          </ion-item>
+        </ion-list>
+      </ion-menu-toggle>
+
+      <ion-menu-toggle>
+        <ion-list lines="none" id="open-modal" class="menulist">
+          <ion-item>
+            <div class="menuitem">
+              <img src="../assets/icon/text-block.svg" />
+              <p class="menu">Switch Language</p>
+            </div>
+          </ion-item>
+        </ion-list>
+      </ion-menu-toggle>
 
       <ion-item-divider mode="md"></ion-item-divider>
 
       <div class="belowmenuitems">
-
         <ion-menu-toggle>
-        <p color="success" class="belowmenu1" (click)="gotohelp()">Helps & FAQs</p>
+          <p color="success" class="belowmenu1" (click)="gotohelp()">Helps & FAQs</p>
         </ion-menu-toggle>
         <ion-menu-toggle>
-        <p class="belowmenu" (click)="gototermuse()">Terms of Use</p>
-      </ion-menu-toggle>
-        <ion-menu-toggle>
-        <p class="belowmenu" (click)="gotorefund()">Refund Policy</p>
-      </ion-menu-toggle>
-        <ion-menu-toggle>
-        <p class="belowmenu" (click)="gototerms()">Terms and Conditions</p>
+          <p class="belowmenu" (click)="gototermuse()">Terms of Use</p>
         </ion-menu-toggle>
         <ion-menu-toggle>
-        <p class="belowmenu" (click)="gotonews()">Newsroom</p>
+          <p class="belowmenu" (click)="gotorefund()">Refund Policy</p>
         </ion-menu-toggle>
         <ion-menu-toggle>
-        <p class="belowmenu" (click)="gotocontact()">Contact Us</p>
-      </ion-menu-toggle>
-      
-
+          <p class="belowmenu" (click)="gototerms()">Terms and Conditions</p>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <p class="belowmenu" (click)="gotonews()">Newsroom</p>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <p class="belowmenu" (click)="gotocontact()">Contact Us</p>
+        </ion-menu-toggle>
       </div>
+
       <ion-menu-toggle>
-      <ion-button class="logoutbtn" (click)="dologout()"><ion-img src="../assets/icon/logout.svg"></ion-img>Logout</ion-button>
+        <ion-button class="logoutbtn" (click)="dologout()">
+          <ion-img src="../assets/icon/logout.svg"></ion-img>Logout
+        </ion-button>
       </ion-menu-toggle>
     </ion-content>
   </ion-menu>
+
   <div class="ion-page" id="main-content">
     <ion-content class="ion-padding">
-  
-      <ion-modal trigger="open-modal" [initialBreakpoint]="1" [breakpoints]="[0, 1]" >
+      <ion-modal trigger="open-modal" [initialBreakpoint]="1" [breakpoints]="[0, 1]">
         <ng-template>
           <div class="block ion-padding">
-
-          <ion-list lines="none">
+            <ion-list lines="none">
               <ion-list-header style="margin-bottom: -10px;">
                 <ion-label color="success" class="lang">Choose Language</ion-label>
               </ion-list-header>
-              <ion-item style="border-bottom: 1px solid #E7E7E7;margin-top: -10px;">
-                <ion-label color="success" class="langoption" style="margin-bottom: -2px !important;">
-                  English
-                </ion-label>
+              <ion-item style="border-bottom: 1px solid #E7E7E7; margin-top: -10px;">
+                <ion-label color="success" class="langoption" style="margin-bottom: -2px !important;">English</ion-label>
               </ion-item>
               <ion-item>
-                <ion-label color="success" class="langoption" style="margin-top: -2px !important;">
-                  Melayu
-                </ion-label>
+                <ion-label color="success" class="langoption" style="margin-top: -2px !important;">Melayu</ion-label>
               </ion-item>
-
               <ion-item>
                 <ion-button color="primary" class="continuebtn" (click)="cancelcontinue()">Continue</ion-button>
               </ion-item>
             </ion-list>
-
-            
-
-
           </div>
         </ng-template>
       </ion-modal>
-      
-      <ion-modal trigger="open-branch-modal" [initialBreakpoint]="1" [breakpoints]="[0, 1]" >
+
+      <!-- <ion-modal trigger="open-branch-modal" [initialBreakpoint]="1" [breakpoints]="[0, 1]">
         <ng-template>
           <div class="block ion-padding" style="height: 300px !important;">
             <ion-list lines="none" style="margin-top: -10px;">
-               <ion-item lines="none">
+              <ion-item lines="none">
                 <ion-label color="success" class="lang">Select Branch</ion-label>
-               </ion-item>
-               
-            </ion-list> 
+              </ion-item>
+            </ion-list>
 
-            <ion-list lines="none">
-              <ion-radio-group value="1" style="position: relative;top: -17px;">
-                <ion-item style="border-bottom: 1px solid #E7E7E7;">
-                  <ion-radio  value="1" justify="start" color="primary" labelPlacement="end">Branch Name 1</ion-radio>
-                </ion-item>
-                <ion-item style="border-bottom: 1px solid #E7E7E7;">
-                  <ion-radio value="2" justify="start" color="primary" labelPlacement="end">Branch Name 2</ion-radio>
-                </ion-item>
-                <ion-item style="border-bottom: 1px solid #E7E7E7;">
-                  <ion-radio  value="3" justify="start" color="primary" labelPlacement="end">Branch Name 3</ion-radio>
+            <ion-list lines="none" [(ngModel)]="selected_branch">
+              <ion-radio-group style="position: relative; top: -17px;">
+                <ion-item style="border-bottom: 1px solid #E7E7E7;" *ngFor="let branch of branches">
+                  <ion-radio (ionselect)="changeBranch(branch.id, branch.full_name)" [value]="branch.id" justify="start" color="primary" labelPlacement="end">{{branch.full_name}}</ion-radio>
                 </ion-item>
               </ion-radio-group>
 
               <ion-item>
                 <ion-button color="primary" class="continuebtn" (click)="cancelcontinue()" style="margin-top: 0px !important;">Continue</ion-button>
               </ion-item>
-           
-
             </ion-list>
+          </div>
+        </ng-template>
+      </ion-modal> -->
 
+      <ion-modal trigger="open-branch-modal" [initialBreakpoint]="1" [breakpoints]="[0, 1]">
+        <ng-template>
+          <div class="block ion-padding" style="height: 300px !important;">
+            <ion-list lines="none" style="margin-top: -10px;">
+              <ion-item lines="none">
+                <ion-label color="success" class="lang">Select Branch</ion-label>
+              </ion-item>
+            </ion-list>
+            <ion-list lines="none" >
+              <ion-radio-group style="position: relative; top: -17px;" [(ngModel)]="selected_branch" (ngModelChange)="changeBranch(selected_branch)">
+                <ion-item style="border-bottom: 1px solid #E7E7E7;" *ngFor="let branch of branches">
+                  <ion-radio [value]="branch.id" justify="start" color="primary" labelPlacement="end">{{branch.full_name}}</ion-radio>
+                </ion-item>
+              </ion-radio-group>
+              <ion-item>
+                <ion-button color="primary" class="continuebtn" (click)="cancelcontinue()" style="margin-top: 0px !important;">Continue</ion-button>
+              </ion-item>
+            </ion-list>
           </div>
         </ng-template>
       </ion-modal>
-
+      
     </ion-content>
   </div>
-  <ion-router-outlet> </ion-router-outlet>
+
+  <ion-router-outlet></ion-router-outlet>
 </ion-app>

@@ -4,12 +4,14 @@ import { HttpClient } from '@angular/common/http';
 import { AlertController } from '@ionic/angular';
 import { FormGroup, FormBuilder,Validators } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
+
 @Component({
-  selector: 'app-forgotpassword',
-  templateUrl: './forgotpassword.page.html',
-  styleUrls: ['./forgotpassword.page.scss'],
+  selector: 'app-verifycode',
+  templateUrl: './verifycode.page.html',
+  styleUrls: ['./verifycode.page.scss'],
 })
-export class ForgotpasswordPage implements OnInit {
+export class VerifycodePage implements OnInit {
+
   uemail:string='';
   burl:any;
   forgotpasswordform:FormGroup;
@@ -51,6 +53,5 @@ export class ForgotpasswordPage implements OnInit {
   storedata(userstuff:any){
     window.localStorage.setItem('uid',userstuff.user_id)
   }
-
 
 }

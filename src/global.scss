@@ -120,3 +120,12 @@ html, body {
   zoom: 1; /* Reset zoom level */
   -webkit-text-size-adjust: 100%; /* Prevent font size adjustment */
 }
+
+.errorhere{
+  color:#F17D7E !important;
+  font-family: sf_pro_display_regular !important;
+}
+
+ion-input-password-toggle {
+  --color: red; /* Change to your desired color */
+}

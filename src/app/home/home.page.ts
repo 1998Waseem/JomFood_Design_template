@@ -7,8 +7,8 @@ import { ScrollDetail } from '@ionic/core';
 // import { DataService } from '../services/data.service';
 import { HttpClient } from '@angular/common/http';
 import { HttpHeaders } from '@angular/common/http';
-import { DataService } from '../services/data.service';
 import { LoadingController } from '@ionic/angular';
+import { AuthService } from '../services/auth.service';
 
 
 @Component({
@@ -24,14 +24,18 @@ export class HomePage {
   topcats:any;
   resultsnoticesfull:any;
   stickyContent: string = 'All'; // Default content for sticky div
-
-  constructor(private menuController: MenuController,private router: Router,public alertController: AlertController,private http:HttpClient,private DataService:DataService,private loadingCtrl: LoadingController) {
+  burl:any;
+  catwiseproducts:any;
+  topcategory:any;
+  constructor(private menuController: MenuController,private router: Router,public alertController: AlertController,private http:HttpClient,private loadingCtrl: LoadingController,private authService: AuthService) {
     this.searchterm = '';
+    this.burl='https://altitudeprojects.net/js-mp/user_api';
+    sessionStorage.setItem("cat_id",'1');
   }
 
   ngOnInit(){
-    this.getmostlikedata();
     this.gettopcat();
+    this.getproducts();
     // this.getcatwiseproducts();
 
   }
@@ -39,9 +43,9 @@ export class HomePage {
     this.menuController.open('sidemenu');
   }
  
-  gotoproductdetails(){
-    this.router.navigate(['/productdetails']);
-  }
+  // gotoproductdetails(){
+    
+  // }
 
   gotocart(){
     this.router.navigate(['/cart']);
@@ -110,20 +114,32 @@ export class HomePage {
     await alert.present();
   }
 
-getmostlikedata(){
+// async getmostlikedata(){
 
-  this.http.get<any[]>('https://system.dilanatandoor.com.my/user_api/dashboard/get_dashboard').subscribe((data: any) => {
-    console.log(data);
-    this.mostpopular =data.data.most_popular;
-    console.log(data.data.most_popular);
-  },e=>{
-    console.log(e)
-  });
+//   var user_id=window.localStorage.getItem('uid');
+//   var apikey=window.localStorage.getItem('apikey');
+//   var seller_id = localStorage.getItem("seller_id");
+
+
+//   const dashboardata= this.http.get<any[]>(this.burl+'/dashboard/get_dashboard?user_id='+user_id+'&apikey='+apikey).subscribe((data: any) => {
+//     console.log(data);
+//     this.mostpopular =data.data.most_popular;
+//     console.log(data.data.most_popular);
+//     localStorage.setItem('Product_id',data.data.most_popular.product_id)
+
+//   },e=>{
+//     console.log(e)
+//   });
  
-}
+// }
 
 gettopcat(){
-  this.http.get<any[]>('https://system.dilanatandoor.com.my/user_api/product/get_categories').subscribe((data: any) => {
+
+  var user_id=window.localStorage.getItem('uid');
+  var apikey=window.localStorage.getItem('apikey');
+  var seller_id = localStorage.getItem("seller_id");
+
+  this.http.get<any[]>(this.burl+'/product/get_categories?user_id='+user_id+ '&apikey='+apikey).subscribe((data: any) => {
     console.log(data);
     this.topcats =data.data.category;
     console.log(data.data.category);
@@ -132,18 +148,48 @@ gettopcat(){
   });
 }
 
-// getcatwiseproducts()
-// {
-//   var category_id = sessionStorage.getItem("product_cat_id");
-//   var type = sessionStorage.getItem("cat_id");
-//   var apikey = window.localStorage.getItem('apikey');
-//   var seller_id = localStorage.getItem("seller_id");
-//   var lat = window.localStorage.getItem('lat');
-//   var long = window.localStorage.getItem('long');
-//   var url = 'https://system.dilanatandoor.com.my/user_api/product/get_products?category_id='+category_id+ '&seller_id='+ seller_id + '&type='+type+'&apikey='+apikey+'&lat='+lat+ '&long='+long;
 
-//   console.log(url);
+getproducts(){
+  var cat_id = window.localStorage.getItem('category_id')
+  var user_id=window.localStorage.getItem('uid');
+  var apikey=window.localStorage.getItem('apikey');
+  var Seller_id = localStorage.getItem("Seller_id");
+  var type = sessionStorage.getItem("cat_id")
 
+  this.http.get<any[]>(this.burl+'/product/get_products?category_id='+cat_id+'&user_id='+user_id+ '&apikey='+apikey +'&type='+type + '&Seller_id='+Seller_id+ '&show=all').subscribe((data: any) => {
+    console.log(data);
+    this.catwiseproducts =data.data;
+    console.log(data.data);
+    var prod_id=sessionStorage.setItem('Product_id',data.data.product_id);
+    console.log(prod_id);
+
+  },e=>{
+    console.log(e)
+  });
+}
+
+
+gotoproductdetails(productId:any) {
+  this.router.navigate([`/productdetails/${productId}`]);
+  console.log(productId);
+}
+
+// gotoproductdetails(x: any) {
+//   console.log(x);
+//   this.router.navigate(['/productdetail', { param1: x }]);
 // }
+
+async gotomostlike(){
+  try{
+    const data = await this.authService.fetchmostlikedata().toPromise();
+  console.log(data);
+  if(data.status ==='success'){
+    this.topcategory = data.data.top_categories;
+    console.log(this.topcategory);
+  }
+  }catch(error){
+    console.log("Error:",error)
+  }
+}
 
 }
