@@ -4,6 +4,9 @@ import { ActionSheetController } from '@ionic/angular';
 import { ModalController } from '@ionic/angular';
 import { HttpClient } from '@angular/common/http';
 import { AuthService } from './services/auth.service';
+import { LoadingController } from '@ionic/angular';
+import { Network } from '@capacitor/network';
+import { ToastController } from '@ionic/angular';
 import { Observable } from 'rxjs';
 @Component({
   selector: 'app-root',
@@ -15,12 +18,16 @@ export class AppComponent {
   public username:any;
   public useremail:any;
   public burl:any;
-  public branches:any;
-  selectedBranchId: number | null = null;
+  public branches:any[]=[];
+  selectedBranchId:string='';
   selectedBranch: any;
   selected_branch:any
-
-  constructor(private router:Router,private actionSheetController: ActionSheetController,private modalController: ModalController,private http:HttpClient,private authservice:AuthService) {
+  disconnectSubscription: any;
+  connectSubscription:any;
+  mostLikedData:any;
+  categories:any;
+  catwiseproduct:any
+  constructor(private router:Router,private actionSheetController: ActionSheetController,private modalController: ModalController,private http:HttpClient,private authservice:AuthService,private loadingCtrl:LoadingController,private toastController:ToastController) {
     console.log('AppComponent instantiated');
 
     this.username = window.localStorage.getItem('ufname');
@@ -32,6 +39,14 @@ export class AppComponent {
 
   ngOnInit(){
     this.getbranches();
+    this.recon();
+    this.disco();
+
+    if (this.branches.length > 0) {
+      const firstBranchId = this.branches[0].id;
+      this.authservice.setBranchId(firstBranchId);
+      this.changeBranch(firstBranchId);
+    }
   }
   async presentActionSheet() {
     const actionSheet = await this.actionSheetController.create({
@@ -66,9 +81,9 @@ export class AppComponent {
     this.router.navigate(['/home']);
   }
 
-  cancelcontinue(){
-    this.modalController.dismiss();
-  }
+  // cancelcontinue(){
+  //   this.modalController.dismiss();
+  // }
   gotomyorder(){
     this.router.navigate(['/orders']);
   }
@@ -136,18 +151,82 @@ export class AppComponent {
     }
   }
 
-  changeBranch(branch_id:any) {
-		if (branch_id !== localStorage.getItem("seller_id")) {
-			localStorage.setItem("seller_id", branch_id)
-			// localStorage.setItem("seller_name", branch_name)
-			this.selected_branch = branch_id;
-      console.log("Branch is:",this.selected_branch);
-      this.authservice.fetchmostlikedata();
-      console.log("Testing");
-     
-    }
-	}
+ async onBranchChange(event: any) {
+    const selectedBranchId = event.detail.value;
+    console.log("Branch id is:",selectedBranchId);
+     this.changeBranch(selectedBranchId);
+     this.modalController.dismiss();
+    //  window.location.reload();
+   
+  }
+
+  // async changeBranch(branchId: string) {
+  //   const loading = await this.loadingCtrl.create({
+  //     message: 'Fetching Branch Data',
+  //   });
+
+  //   await loading.present();
+
+  //   try {
+  //     this.authservice.changeBranch(branchId);
+  //     this.mostLikedData = await this.authservice.fetchmostlikedata().toPromise();
+  //     this.categories = await this.authservice.getcategories().toPromise();
+  //     this.catwiseproduct= await this.authservice.get_catwise_products().toPromise();
+  //   } catch (error) {
+  //     console.error('Error changing branch:', error);
+  //   } finally {
+  //     await loading.dismiss();
+  //   }
+  // }
+
+  async changeBranch(branchId: string) {
+  const loading = await this.loadingCtrl.create({
+    message: 'Fetching Branch Data',
+  });
+
+  await loading.present();
+
+  try {
+    this.authservice.changeBranch(branchId);
+    this.authservice.setBranchId(branchId);  // Update the branch service
+  } catch (error) {
+    console.error('Error changing branch:', error);
+  } finally {
+    await loading.dismiss();
+  }
+  }
+  
+
+  async disco() {
+    this.disconnectSubscription = Network.addListener('networkStatusChange', async (status) => {
+      if (!status.connected) {
+        console.log('network was disconnected :-(');
+        const toast = await this.toastController.create({
+          message: 'You have been disconnected from the Internet',
+          duration: 2000
+        });
+        toast.present();
+        this.recon();
+        this.disconnectSubscription.remove();
+      }
+    });
+  }
+
+  async recon() {
+    this.connectSubscription = Network.addListener('networkStatusChange', async (status) => {
+      if (status.connected) {
+        console.log('network connected!');
+        const toast = await this.toastController.create({
+          message: 'You have connected to the Internet',
+          duration: 2000
+        });
+        toast.present();
+        this.disco();
+        this.connectSubscription.remove();
+      }
+    });
+  }
 
  
-  
+
 }

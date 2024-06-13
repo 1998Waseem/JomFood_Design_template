@@ -380,3 +380,11 @@ ion-segment-button{
     margin: 5px auto; /* Adjust the margin as needed */
     cursor: pointer;
   }
+
+  .no_reviews{
+    color:var(--ion-color-success);
+    font-family: sf_pro_display_bold;
+    font-size: 12.5px;
+    margin: 0px auto !important;
+    text-align: center !important;
+  }

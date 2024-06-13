@@ -129,3 +129,25 @@ html, body {
 ion-input-password-toggle {
   --color: red; /* Change to your desired color */
 }
+
+h2#alert-3-sub-hdr {
+  font-size: 17px;
+  text-align: center;
+  font-family: 'sf_pro_display_regular';
+}
+
+button.alert-button.ion-focusable.ion-activatable.sc-ion-alert-md {
+  border: 1px solid;
+  border-radius: 10px;
+  height: 38px;
+}
+
+ion-app {
+	@media screen and (min-width: 1300px) {
+		//for browser
+		width: 80% !important;
+		margin-left: 10%;
+		border-left: 1px solid lightgrey;
+		border-right: 1px solid lightgrey;
+	}
+}

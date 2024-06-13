@@ -150,6 +150,10 @@ const routes: Routes = [
   {
     path: 'resetpassword',
     loadChildren: () => import('./pages/resetpassword/resetpassword.module').then( m => m.ResetpasswordPageModule)
+  },
+  {
+    path: 'testpage',
+    loadChildren: () => import('./testpage/testpage.module').then( m => m.TestpagePageModule)
   }
 
 ];

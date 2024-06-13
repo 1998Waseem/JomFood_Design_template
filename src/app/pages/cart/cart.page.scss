@@ -15,13 +15,23 @@ ion-title {
 
 .delivery_btn {
      text-transform: none;
-    font-size: 11.5px;
+    font-size: 9px;
     font-family: sf_pro_display_medium;
     height: 28px;
     width: 80px;
+    font-weight: 100;
 
 }
-
+.tipbtn{
+    width: 57px;
+    min-height: 32px;
+    max-width: 60px;
+    border: 1px solid #8C9099;
+    color: #8C9099;
+    font-size: 17px;
+    font-family: sf_pro_display_semibold;
+    border-radius: 10px;
+}
 ion-segment-button{
     font-size: 16px;
     font-family: sf_pro_display_semibold;
@@ -176,6 +186,11 @@ ion-badge span{
     font-size: 16px;
     font-family: sf_pro_display_regular;
     color: var(--ion-color-success);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
 }
 .itemprice{
     font-size: 18px;
@@ -201,6 +216,7 @@ ion-badge span{
 ion-item-sliding.md.hydrated {
     border-radius: 10px;
     height: 75px;
+    margin-top: 10px;
 }
 
 .checkbox {

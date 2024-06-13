@@ -2,6 +2,9 @@
   width: 191px;
   height: 48px;
   margin: 0px auto;
+  position: relative;
+    right: 20px;
+    top: -3px;
 }
 .maintitle{
   font-size: 24px;
@@ -51,8 +54,13 @@ ion-avatar {
 
 .item_name{
   font-size: 14px;
-  font-family: sf_pro_display_regular;
-  color:var(--ion-color-success);
+    font-family: sf_pro_display_regular;
+    color: var(--ion-color-success);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
 }
 
 .delivery_info{

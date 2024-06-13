@@ -1,14 +1,14 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start" (click)="openMenu()" class="ion-text-left">
-        <img src="../../assets/icon/sidemenu.svg">
+        <img src="assets/icon/sidemenu.svg">
     </ion-buttons>
     <div class="logo">
-      <ion-img src="../../assets/images/logo.svg" class="logoimg" alt="dilana logo" />
+      <ion-img src="assets/images/logo.svg" class="logoimg" alt="dilana logo" />
     </div>
   
     <ion-buttons slot="end" class="ion-text-right">
-      <img src="../../assets/icon/sidemenu.svg" style="opacity: 0;">
+      <img src="assets/icon/sidemenu.svg" style="opacity: 0;">
   </ion-buttons>
   
   </ion-toolbar>
@@ -29,7 +29,7 @@
           <ion-col size="8">
             <p class="availbalancehead">Available Balance</p>
             <p class="availbalance">RM 0.00</p>
-            <p color="success" class="update"><ion-icon style="font-size: 17px;" src="../../../assets/icon/refresh.svg" />&nbsp;Last Updated 2 min ago</p>
+            <p color="success" class="update"><ion-icon style="font-size: 17px;" src="assets/icon/refresh.svg" />&nbsp;Last Updated 2 min ago</p>
           </ion-col>
           <ion-col size="4" style="text-align: right;">
             <ion-badge (click)="gotoaddcredit()">Add Balance</ion-badge>
@@ -47,7 +47,7 @@
     </ion-row>
     <ion-row>
       <ion-col size="12" class="ion-text-center animate__animated animate__zoomIn">
-        <ion-img src="../../../assets/images/nohistory.png" class="nohistoryimg"></ion-img>
+        <ion-img src="assets/images/nohistory.png" class="nohistoryimg"></ion-img>
         <p class="nohistoryfound">No History Found</p>
         <p class="tryagain">Please try again later!</p>
       </ion-col>
@@ -60,23 +60,23 @@
     <ion-tabs>
       <ion-tab-bar slot="bottom">
         <ion-tab-button tab="home" (click)="gotohome()" class="footericons">
-          <ion-img src="../../assets/icon/homeorange.svg"></ion-img>
+          <ion-img src="assets/icon/homeorange.svg"></ion-img>
          <ion-label class="menuname">Home</ion-label> 
         </ion-tab-button>
         <ion-tab-button tab="credits" (click)="gotocredit()" class="footericons">
-          <ion-img src="../../assets/icon/card-tick.svg"></ion-img>
+          <ion-img src="assets/icon/card-tick.svg"></ion-img>
           <ion-label class="menuname">Credits</ion-label>
         </ion-tab-button>
         <ion-tab-button tab="Cart" (click)="gotocart()" class="footericons">
-          <ion-img src="../../assets/icon/shopping-cart.svg"></ion-img>
+          <ion-img src="assets/icon/shopping-cart.svg"></ion-img>
           <ion-label class="menuname">Cart</ion-label>
         </ion-tab-button>
         <ion-tab-button tab="Orders" (click)="gotoorders()" class="footericons">
-          <ion-img src="../../assets/icon/order.svg"></ion-img>
+          <ion-img src="assets/icon/order.svg"></ion-img>
           <ion-label class="menuname">Orders</ion-label> 
         </ion-tab-button>
         <ion-tab-button tab="Profile" (click)="gotoprofile()">
-          <ion-img src="../../assets/icon/profile.svg"></ion-img>
+          <ion-img src="assets/icon/profile.svg"></ion-img>
           <ion-label class="menuname">Profile</ion-label>
         </ion-tab-button>
       </ion-tab-bar>
