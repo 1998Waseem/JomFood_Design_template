@@ -34,7 +34,8 @@
     <ion-row style="margin-top: -3.92vh;">
       <ion-col size="1"></ion-col>
       <ion-col size="10" class="ion-text-center signupmainclass animate__animated animate__zoomIn animate__faster">
-        <ion-label color="success">Login</ion-label>
+        <!-- <ion-label color="success">Login</ion-label> -->
+         <ion-img src="assets/images/mylogo.png" class="logo"></ion-img>
       </ion-col>
       <ion-col size="1"></ion-col>
     </ion-row>
@@ -43,34 +44,28 @@
       <ion-col size="1"></ion-col>
       <ion-col size="10" class="animate__animated animate__fadeInRightBig">
       
-        <form [formGroup]="loginform">
+        <form>
         <div class="inputfield" id="emailfield" style="margin-top: 2.61vh !important;">
         <ion-label>E-mail</ion-label>
-        <ion-input type="email" formControlName="loginname" placeholder="Your email or phone" class="email" fill="outline"/>
-        <ion-item *ngIf="loginform && !loginform.controls['loginname'].valid && (loginform.controls['loginname'].dirty || submitAttempt2)" lines="none">
-          <p class="errorhere" text-wrap>Please enter valid email!</p>
-       </ion-item>
+        <ion-input type="email"  placeholder="Your email or phone" class="email" fill="outline"/>
       </div>
 
       <div class="inputfield" id="passwordfield">
         <ion-label>Password</ion-label>
-        <ion-input type="password" formControlName="loginpassword" placeholder="Password" class="email" fill="outline">
+        <ion-input type="password"  placeholder="Password" class="email" fill="outline">
           <!-- <ion-button fill="clear" slot="end" aria-label="Show/hide">
             <ion-icon slot="icon-only" src="../../../assets/icon/eye.svg"></ion-icon>
           </ion-button> -->
           <ion-input-password-toggle slot="end" color="darkgray"></ion-input-password-toggle>
 
         </ion-input>
-        <ion-item *ngIf="loginform && !loginform.controls['loginpassword'].valid && (loginform.controls['loginpassword'].dirty || submitAttempt2)" lines="none">
-          <p class="errorhere" text-wrap>Please enter valid password!</p>
-       </ion-item>
         </div>
 
         <div class="forgotpassword">
           <ion-label color="primary" (click)="gotoforgot()">Forgot password?</ion-label>
         </div>
         <div class="signupbutton">
-        <ion-button color="primary" shape="round" size="default" class="login_btn" (click)="dothelogin()">Login</ion-button>
+        <ion-button color="primary" shape="round" size="default" class="login_btn" (click)="gotodashboard()">Login</ion-button>
 
       </div>
 
@@ -94,21 +89,29 @@
         <ion-col size="1"></ion-col>
 
       </ion-row>
-      <ion-row style="margin-top:-15px;">
+      <!-- <ion-row style="margin-top:-15px;">
         <ion-col size="1"></ion-col>
         <ion-col size="5" class="ion-text-center">
           <ion-button color="light"  size="small"  class="social_btn">
-            <!-- <img slot="start" src="../../assets/icon/whatsapp.png" style="width: 20%;" />&nbsp;&nbsp; -->
             <ion-icon slot="start" src="assets/icon/whatsapp.svg" />
             Whatsapp
           </ion-button>
         </ion-col>
-        <!-- <ion-col size="2"></ion-col> -->
         <ion-col size="5" class="ion-text-center">
           <ion-button color="light"  size="small" class="social_btn">
-            <!-- <img slot="start" src="../../assets/icon/google.png" style="width: 20%;" />&nbsp;&nbsp; -->
             <ion-icon slot="start" src="assets/icon/google.svg" />
             Google
+          </ion-button>
+          <ion-col size="1"></ion-col>
+        </ion-col>
+      </ion-row> -->
+
+      <ion-row style="margin-top:-15px;">
+        <ion-col size="1"></ion-col>
+        <ion-col size="10">
+          <ion-button color="light"  size="small" class="social_btn">
+            <ion-icon slot="start" src="assets/icon/google.svg" />
+           Sign in With Google
           </ion-button>
           <ion-col size="1"></ion-col>
         </ion-col>
@@ -118,7 +121,7 @@
       <ion-row>
         <ion-col size="1"></ion-col>
         <ion-col size="10" class="ion-text-center">
-          <button class="guest_btn" (click)="fetching_products_as_a_guest()">Continue as a Guest</button>
+          <button class="guest_btn" (click)="gotodashboard()">Continue as a Guest</button>
         </ion-col>
         <ion-col size="1"></ion-col>
       </ion-row>

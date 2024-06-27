@@ -137,17 +137,40 @@ h2#alert-3-sub-hdr {
 }
 
 button.alert-button.ion-focusable.ion-activatable.sc-ion-alert-md {
-  border: 1px solid;
-  border-radius: 10px;
-  height: 38px;
+  // border: 1px solid;
+  // border-radius: 10px;
+  // height: 38px;
+  font-family: 'sf_pro_display_regular';
 }
 
-ion-app {
-	@media screen and (min-width: 1300px) {
-		//for browser
-		width: 80% !important;
-		margin-left: 10%;
-		border-left: 1px solid lightgrey;
-		border-right: 1px solid lightgrey;
-	}
+
+.alert-radio-label.sc-ion-alert-md {
+  font-size: 13px;
+  font-family: 'sf_pro_display_regular';
+}
+
+h2#alert-4-hdr {
+  font-family: 'sf_pro_display_bold';
+  color: var(--ion-color-success);
+  font-size: 20px;
+}
+
+button.alert-button.ion-focusable.ion-activatable.sc-ion-alert-md {
+  font-family: 'sf_pro_display_regular';
+  text-transform: unset;
+}
+
+// ion-app {
+// 	@media screen and (min-width: 1300px) {
+// 		//for browser
+// 		width: 80% !important;
+// 		margin-left: 10%;
+// 		border-left: 1px solid lightgrey;
+// 		border-right: 1px solid lightgrey;
+// 	}
+// }
+
+
+.alert-wrapper.ion-overlay-wrapper.sc-ion-alert-md {
+  border-radius: 10px;
 }

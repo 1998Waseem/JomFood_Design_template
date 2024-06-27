@@ -11,6 +11,9 @@ export class WelcomePage implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit() {
+    setTimeout(() => {
+      this.router.navigate(['/home']);
+    }, 3000);
   }
 
   // gotodashboard(){

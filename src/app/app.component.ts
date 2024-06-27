@@ -7,6 +7,7 @@ import { AuthService } from './services/auth.service';
 import { LoadingController } from '@ionic/angular';
 import { Network } from '@capacitor/network';
 import { ToastController } from '@ionic/angular';
+import { AlertController } from '@ionic/angular';
 import { Observable } from 'rxjs';
 @Component({
   selector: 'app-root',
@@ -27,7 +28,7 @@ export class AppComponent {
   mostLikedData:any;
   categories:any;
   catwiseproduct:any
-  constructor(private router:Router,private actionSheetController: ActionSheetController,private modalController: ModalController,private http:HttpClient,private authservice:AuthService,private loadingCtrl:LoadingController,private toastController:ToastController) {
+  constructor(private router:Router,private actionSheetController: ActionSheetController,private modalController: ModalController,private http:HttpClient,private authservice:AuthService,private loadingCtrl:LoadingController,private toastController:ToastController,private alertCtrl:AlertController) {
     console.log('AppComponent instantiated');
 
     this.username = window.localStorage.getItem('ufname');
@@ -38,15 +39,6 @@ export class AppComponent {
 
 
   ngOnInit(){
-    this.getbranches();
-    this.recon();
-    this.disco();
-
-    if (this.branches.length > 0) {
-      const firstBranchId = this.branches[0].id;
-      this.authservice.setBranchId(firstBranchId);
-      this.changeBranch(firstBranchId);
-    }
   }
   async presentActionSheet() {
     const actionSheet = await this.actionSheetController.create({
@@ -130,71 +122,6 @@ export class AppComponent {
     this.router.navigate(['/login']);
   }
 
-
-  async getbranches(){
-    var url= this.burl + '/seller/get_branches';
-  
-    try{
-      const data:any = await this.http.get(url).toPromise();
-      console.log('Get Branches are:',data);
-  
-      if(data.status == "success"){
-        this.branches = data.data;
-        console.log("Get Branchesn response:", this.branches);
-        localStorage.setItem('seller_id:',this.branches[0].id);
-        localStorage.setItem('seller_name:',this.branches[0].full_name);
-      }else{
-        console.log("Error",data.message);
-      }
-    }catch(error){
-      console.log("Error in get branches:",error);
-    }
-  }
-
- async onBranchChange(event: any) {
-    const selectedBranchId = event.detail.value;
-    console.log("Branch id is:",selectedBranchId);
-     this.changeBranch(selectedBranchId);
-     this.modalController.dismiss();
-    //  window.location.reload();
-   
-  }
-
-  // async changeBranch(branchId: string) {
-  //   const loading = await this.loadingCtrl.create({
-  //     message: 'Fetching Branch Data',
-  //   });
-
-  //   await loading.present();
-
-  //   try {
-  //     this.authservice.changeBranch(branchId);
-  //     this.mostLikedData = await this.authservice.fetchmostlikedata().toPromise();
-  //     this.categories = await this.authservice.getcategories().toPromise();
-  //     this.catwiseproduct= await this.authservice.get_catwise_products().toPromise();
-  //   } catch (error) {
-  //     console.error('Error changing branch:', error);
-  //   } finally {
-  //     await loading.dismiss();
-  //   }
-  // }
-
-  async changeBranch(branchId: string) {
-  const loading = await this.loadingCtrl.create({
-    message: 'Fetching Branch Data',
-  });
-
-  await loading.present();
-
-  try {
-    this.authservice.changeBranch(branchId);
-    this.authservice.setBranchId(branchId);  // Update the branch service
-  } catch (error) {
-    console.error('Error changing branch:', error);
-  } finally {
-    await loading.dismiss();
-  }
-  }
   
 
   async disco() {
@@ -226,7 +153,49 @@ export class AppComponent {
       }
     });
   }
+  async presentRadioAlert() {
+    const alert = await this.alertCtrl.create({
+      header: 'Select Branch',
+      inputs: [
+        {
+          name: 'radio1',
+          type: 'radio',
+          label: 'Yasir Foods',
+          value: 'Yasir_Foods',
+          checked: true
+        },
+        {
+          name: 'radio2',
+          type: 'radio',
+          label: 'Yasir Foods (B)',
+          value: 'Yasir_Foods_(B)'
+        },
+        {
+          name: 'radio3',
+          type: 'radio',
+          label: 'Yasur Foods (Al Daud)a',
+          value: 'Yasur_Foods_(Al Daud)a'
+        }
+      ],
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          cssClass: 'secondary',
+          handler: () => {
+            console.log('Confirm Cancel');
+          }
+        }, {
+          text: 'Ok',
+          handler: (data: any) => {
+            console.log('Confirm Ok with data:', data);
+          }
+        }
+      ]
+    });
 
+    await alert.present();
+  }
  
 
 }

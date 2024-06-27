@@ -15,10 +15,10 @@ ion-title {
 
 .delivery_btn {
      text-transform: none;
-    font-size: 9px;
+    font-size: 11px;
     font-family: sf_pro_display_medium;
     height: 28px;
-    width: 80px;
+    width: auto;
     font-weight: 100;
 
 }
@@ -42,7 +42,7 @@ ion-segment-button{
     font-size: 12px;
     /* width: 85px; */
     font-family: sf_pro_display_regular;
-    width: 80px;
+    width: auto;
     --background: linear-gradient(#FAFAFA,#EEEE);
 }
 
