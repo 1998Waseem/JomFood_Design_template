@@ -7,8 +7,8 @@
             <ion-img src="assets/images/mylogo.png" style="width: 100px; height: 100px; margin-bottom: 20px;" />
           </ion-col>
           <ion-col size="12">
-            <p class="name">{{username}}</p>
-            <p class="email">{{useremail}}</p>
+            <p class="name">Farion Wick</p>
+            <p class="email">farionwick&#64;gmail.com</p>
           </ion-col>
         </ion-row>
       </ion-grid>
@@ -37,7 +37,7 @@
 
       <ion-menu-toggle>
         <ion-list lines="none" class="menulist">
-          <ion-item id="open-branch-modal">
+          <ion-item (click)="presentRadioAlert()">
             <div class="menuitem">
               <img src="assets/icon/task.svg" />
               <p class="menu">Change Branch</p>
@@ -190,7 +190,7 @@
         </ng-template>
       </ion-modal> -->
 
-      <ion-modal trigger="open-branch-modal" [initialBreakpoint]="1" [breakpoints]="[0, 1]">
+      <!-- <ion-modal trigger="open-branch-modal" [initialBreakpoint]="1" [breakpoints]="[0, 1]">
         <ng-template>
           <div class="block ion-padding">
             <ion-list lines="none" style="margin-top: -10px;">
@@ -204,13 +204,11 @@
                   <ion-radio [value]="branch.id" justify="start" color="primary" labelPlacement="end">{{branch.full_name}}</ion-radio>
                 </ion-item>
               </ion-radio-group>
-              <!-- <ion-item>
-                <ion-button color="primary" class="continuebtn" (click)="cancelcontinue()" style="margin-top: 0px !important;">Continue</ion-button>
-              </ion-item> -->
+              
             </ion-list>
           </div>
         </ng-template>
-      </ion-modal>
+      </ion-modal> -->
       
     </ion-content>
   </div>

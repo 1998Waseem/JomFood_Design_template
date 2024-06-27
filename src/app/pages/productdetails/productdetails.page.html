@@ -26,16 +26,16 @@
   <ion-grid style="margin-top: 20px;">
     <ion-row class="itemdetailsrow">
       <ion-col size="6">
-         <ion-label  *ngIf="singlepro?.name" color="success" class="itemname animate__animated animate__slideInLeft">{{singlepro.name}}</ion-label>
+         <ion-label color="success" class="itemname animate__animated animate__slideInLeft">Beef Samosa</ion-label>
       </ion-col>
       <ion-col size="6" style="text-align: right;">
-        <ion-label *ngIf="singlepro?.price" color="success" class="itemprice animate__animated animate__slideInRight">${{singlepro.price}}</ion-label>
+        <ion-label color="success" class="itemprice animate__animated animate__slideInRight">$12</ion-label>
      </ion-col>
     </ion-row>
     <ion-row>
       <ion-col size="12">
-        <p class="itemdesc animate__animated animate__slideInLeft" *ngIf="singlepro?.description">
-          {{singlepro.description}}
+        <p class="itemdesc animate__animated animate__slideInLeft">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor ac leo lorem nisl. Viverra vulputate sodales quis et dui, lacus. Iaculis eu egestas egestas vel... <a href="#">Read More</a>
         </p>
       </ion-col>
     </ion-row>
@@ -64,27 +64,114 @@
     
 
     <ion-grid>
-      <ion-row *ngFor="let relapro of prorelated">
+      <ion-row>
          <ion-col size="12" size-sm="6" size-md="4" size-lg="3" size-xl="3">
           <ion-list lines="none" class="product_list ion-no-padding animate__animated animate__slideInLeft">
             <ion-item lines="none">
               <ion-avatar slot="start" class="product_img">
-                <ion-img *ngIf="relapro?.image_url" [src]="relapro.image_url"></ion-img>
+                <ion-img src="assets/images/Beefsamosa.png"></ion-img>
               </ion-avatar>
               <div class="item-info">
                 <ion-row>
                   <ion-col size="12">
-                    <p class="item_name" *ngIf="relapro?.name">{{relapro?.name}}</p>
+                    <p class="item_name">Chicken Samosa</p>
                   </ion-col>
                 </ion-row>
                 <ion-row class="pricepluscounter">
                   <ion-col size="6" class="pricecol">
-                    <p class="price" *ngIf="relapro?.price">${{relapro?.price}}</p>
+                    <p class="price">+$12.00</p>
                   </ion-col>
                   <ion-col size="6" class="countercol">
                     <div class="counter-row">
                       <ion-icon name="remove" color="success" class="minusicon"></ion-icon>
-                      <span class="counter">4</span>
+                      <span class="counter">0</span>
+                      <ion-icon name="add" class="addicon"></ion-icon>
+                    </div>
+                  </ion-col>
+                </ion-row>
+              </div>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+
+        <ion-col size="12" size-sm="6" size-md="4" size-lg="3" size-xl="3">
+          <ion-list lines="none" class="product_list ion-no-padding animate__animated animate__slideInLeft">
+            <ion-item lines="none">
+              <ion-avatar slot="start" class="product_img">
+                <ion-img src="assets/images/Beefsamosa.png"></ion-img>
+              </ion-avatar>
+              <div class="item-info">
+                <ion-row>
+                  <ion-col size="12">
+                    <p class="item_name">Chicken Samosa</p>
+                  </ion-col>
+                </ion-row>
+                <ion-row class="pricepluscounter">
+                  <ion-col size="6" class="pricecol">
+                    <p class="price">+$12.00</p>
+                  </ion-col>
+                  <ion-col size="6" class="countercol">
+                    <div class="counter-row">
+                      <ion-icon name="remove" color="success" class="minusicon"></ion-icon>
+                      <span class="counter">0</span>
+                      <ion-icon name="add" class="addicon"></ion-icon>
+                    </div>
+                  </ion-col>
+                </ion-row>
+              </div>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+
+        <ion-col size="12" size-sm="6" size-md="4" size-lg="3" size-xl="3">
+          <ion-list lines="none" class="product_list ion-no-padding animate__animated animate__slideInLeft">
+            <ion-item lines="none">
+              <ion-avatar slot="start" class="product_img">
+                <ion-img src="assets/images/Beefsamosa.png"></ion-img>
+              </ion-avatar>
+              <div class="item-info">
+                <ion-row>
+                  <ion-col size="12">
+                    <p class="item_name">Chicken Samosa</p>
+                  </ion-col>
+                </ion-row>
+                <ion-row class="pricepluscounter">
+                  <ion-col size="6" class="pricecol">
+                    <p class="price">+$12.00</p>
+                  </ion-col>
+                  <ion-col size="6" class="countercol">
+                    <div class="counter-row">
+                      <ion-icon name="remove" color="success" class="minusicon"></ion-icon>
+                      <span class="counter">0</span>
+                      <ion-icon name="add" class="addicon"></ion-icon>
+                    </div>
+                  </ion-col>
+                </ion-row>
+              </div>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+
+        <ion-col size="12" size-sm="6" size-md="4" size-lg="3" size-xl="3">
+          <ion-list lines="none" class="product_list ion-no-padding animate__animated animate__slideInLeft">
+            <ion-item lines="none">
+              <ion-avatar slot="start" class="product_img">
+                <ion-img src="assets/images/Beefsamosa.png"></ion-img>
+              </ion-avatar>
+              <div class="item-info">
+                <ion-row>
+                  <ion-col size="12">
+                    <p class="item_name">Chicken Samosa</p>
+                  </ion-col>
+                </ion-row>
+                <ion-row class="pricepluscounter">
+                  <ion-col size="6" class="pricecol">
+                    <p class="price">+$12.00</p>
+                  </ion-col>
+                  <ion-col size="6" class="countercol">
+                    <div class="counter-row">
+                      <ion-icon name="remove" color="success" class="minusicon"></ion-icon>
+                      <span class="counter">0</span>
                       <ion-icon name="add" class="addicon"></ion-icon>
                     </div>
                   </ion-col>
@@ -95,13 +182,7 @@
         </ion-col>
        </ion-row>
     </ion-grid>
-    <!-- <ng-template #noRealtedproductTemplate >
-      <div class="pro_no_reviews" style="text-align: center;">
-        <ion-img src='../../../assets/images/nohistory.png' style="width: 250px;
-      margin: 30px auto;"></ion-img>
-      <ion-label class="no_reviews ion-text-center">No Product found</ion-label>
-      </div>
-    </ng-template> -->
+
    
   </div>
 
@@ -118,22 +199,22 @@
     </ion-row>
    </ion-grid>
 
-   <ion-list lines="none" class="animate__animated animate__slideInLeft" *ngFor="let review of proreviews">
+   <ion-list lines="none" class="animate__animated animate__slideInLeft">
     <ion-item>
       <ion-avatar slot="start" class="profile_img">
-        <ion-img *ngIf="review?.img_url" [src]="review.img_url" />
+        <ion-img src="../../../assets/icon/circle.png" />
       </ion-avatar>
       <div class="reviews" slot="end"> 
-        <ion-label class="date" *ngIf="review?.customer_review_datetime">{{review.customer_review_datetime}}</ion-label>
-        <ion-label class="comment_heading" *ngIf="review?.name">{{review.name}}</ion-label>
-        <ion-label class="stars" *ngIf="review?.customer_rating">
-          <ion-icon name="star" color="primary"></ion-icon>{{review.customer_rating}}
-          <!-- <ion-icon name="star" color="primary"></ion-icon>
+        <ion-label class="date">20/12/2020</ion-label>
+        <ion-label class="comment_heading">Great Food and Service</ion-label>
+        <ion-label class="stars">
           <ion-icon name="star" color="primary"></ion-icon>
           <ion-icon name="star" color="primary"></ion-icon>
-          <ion-icon name="star" color="primary"></ion-icon> -->
+          <ion-icon name="star" color="primary"></ion-icon>
+          <ion-icon name="star" color="primary"></ion-icon>
+          <ion-icon name="star" color="primary"></ion-icon>
         </ion-label>
-        <ion-label class="comment_desc" *ngIf="review?.customer_review">{{review.customer_review}}</ion-label>
+        <ion-label class="comment_desc">This Food so tasty & delicious. Breakfast so fast Delivered in my place. Chef is very friendly. I’m really like chef for Home Food Order. Thanks. </ion-label>
       </div>
     </ion-item>
    </ion-list>
@@ -180,7 +261,7 @@
       <ion-col size="8">
         <!-- <button class="add-to-cart-btn" (click)="gotocart()">Add to Cart</button> -->
 
-        <ion-button class="addtocart" (click)="addToCart()" id="open-loading">Add to Cart - {{cartItems}}</ion-button>
+        <ion-button class="addtocart" (click)="gotoaddToCart()" id="open-loading">Add to Cart</ion-button>
       </ion-col>
     </ion-row>
   </ion-grid>
